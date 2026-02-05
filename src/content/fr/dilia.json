@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Dilia",
+    "subtitle": "Restaurant italien"
+  },
+  "sections": {
+    "chef": {
+      "title": "Le Chef",
+      "subtitle": "Michele Farnesi",
+      "description": "Né en Toscane, Michele Farnesi a grandi entre les cuisines de ses deux grands-mères. L'une lui a transmis l'art des pâtes fraîches, l'autre celui des plats mijotés. Cette double héritage nourrit sa cuisine généreuse et authentique.",
+      "quote": "La cuisine, c'est l'amour que l'on met dans chaque assiette."
+    },
+    "menu": {
+      "title": "La Carte",
+      "subtitle": "Cuisine de saison",
+      "description": "Notre carte évolue au fil des saisons, mettant en valeur les meilleurs produits italiens. Des antipasti aux desserts, chaque plat raconte une histoire de tradition et de passion."
+    },
+    "wines": {
+      "title": "Les Vins",
+      "subtitle": "Sélection",
+      "description": "Une cave soigneusement constituée de vins italiens naturels et biodynamiques, sélectionnés auprès de vignerons indépendants que nous connaissons personnellement."
+    },
+    "reservation": {
+      "title": "Réservation",
+      "subtitle": "Réservez votre table",
+      "description": "Pour réserver une table chez Dilia, utilisez notre système de réservation en ligne ou contactez-nous directement."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Nous trouver",
+      "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 04",
+      "email": "contact@dilia.fr",
+      "hours": {
+        "title": "Horaires",
+        "lunch": "Déjeuner : 12h - 14h30",
+        "dinner": "Dîner : 19h - 22h30",
+        "closed": "Fermé le dimanche"
+      }
+    }
+  }
+}

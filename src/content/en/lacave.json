@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "La Cave",
+    "subtitle": "Wine Bar"
+  },
+  "sections": {
+    "story": {
+      "title": "The Story",
+      "subtitle": "The enoteca spirit",
+      "description": "La Cave was born from our passion for natural wines. In the spirit of Italian enoteche, we offer a selection of wines to enjoy on site, accompanied by small plates."
+    },
+    "wines": {
+      "title": "Wines",
+      "subtitle": "Our selection",
+      "description": "Natural, biodynamic and rare wines. Mainly Italian, but also some French gems. Each bottle tells the story of a passionate winemaker."
+    },
+    "events": {
+      "title": "Events",
+      "subtitle": "Tastings & special evenings",
+      "description": "Regularly, we organize themed tastings, meetings with winemakers and special evenings."
+    },
+    "photos": {
+      "title": "Photos",
+      "subtitle": "The atmosphere",
+      "description": "Discover the warm atmosphere of La Cave through our images."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Find us",
+      "address": "23 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 06",
+      "email": "lacave@dilia.fr",
+      "hours": {
+        "title": "Hours",
+        "weekdays": "Tuesday - Saturday: 5pm - 11pm",
+        "closed": "Closed Sunday and Monday"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "La Cave",
+    "subtitle": "Bar à Vins"
+  },
+  "sections": {
+    "story": {
+      "title": "L'Histoire",
+      "subtitle": "L'esprit enoteca",
+      "description": "La Cave est née de notre passion pour les vins naturels. Dans l'esprit des enoteche italiennes, nous proposons une sélection de vins à déguster sur place, accompagnés de petites assiettes."
+    },
+    "wines": {
+      "title": "Les Vins",
+      "subtitle": "Notre sélection",
+      "description": "Vins naturels, biodynamiques et rares. Italiens principalement, mais aussi quelques pépites françaises. Chaque bouteille raconte l'histoire d'un vigneron passionné."
+    },
+    "events": {
+      "title": "Événements",
+      "subtitle": "Dégustations & soirées",
+      "description": "Régulièrement, nous organisons des dégustations thématiques, des rencontres avec des vignerons et des soirées spéciales."
+    },
+    "photos": {
+      "title": "Photos",
+      "subtitle": "L'ambiance",
+      "description": "Découvrez l'atmosphère chaleureuse de La Cave à travers nos images."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Nous trouver",
+      "address": "23 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 06",
+      "email": "lacave@dilia.fr",
+      "hours": {
+        "title": "Horaires",
+        "weekdays": "Mardi - Samedi : 17h - 23h",
+        "closed": "Fermé dimanche et lundi"
+      }
+    }
+  }
+}

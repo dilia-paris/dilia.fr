@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "Dilietta",
+    "subtitle": "Grocery & Catering"
+  },
+  "sections": {
+    "story": {
+      "title": "The Story",
+      "subtitle": "Born in 2024",
+      "description": "Dilietta is the natural extension of the Dilia universe. A place to find the Italian cuisine we love every day: simple, generous, made with exceptional products."
+    },
+    "menu": {
+      "title": "The Menu",
+      "subtitle": "Antipasti, pasta & dishes",
+      "description": "Every day, discover our morning-made antipasti, fresh pasta, daily specials and lunch formulas. Take away or enjoy on site."
+    },
+    "products": {
+      "title": "Products",
+      "subtitle": "Italian grocery",
+      "description": "A curated selection of Italian products: olive oils, vinegars, dried pasta, preserves, charcuterie and cheeses from producers we know."
+    },
+    "suppliers": {
+      "title": "Suppliers",
+      "subtitle": "Our producers",
+      "description": "We work directly with passionate Italian producers, selected for the quality of their products and their commitment."
+    },
+    "catering": {
+      "title": "Catering",
+      "subtitle": "Events & receptions",
+      "description": "For your corporate events, weddings or private occasions, Dilietta offers a bespoke catering service, true to the spirit of Italian generosity."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Find us",
+      "address": "27 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 05",
+      "email": "dilietta@dilia.fr",
+      "hours": {
+        "title": "Hours",
+        "weekdays": "Monday - Friday: 10am - 7pm",
+        "saturday": "Saturday: 10am - 6pm",
+        "closed": "Closed on Sunday"
+      }
+    }
+  }
+}
