@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "Dilietta",
+    "subtitle": "Épicerie & Traiteur"
+  },
+  "sections": {
+    "story": {
+      "title": "L'Histoire",
+      "subtitle": "Née en 2024",
+      "description": "Dilietta est l'extension naturelle de l'univers Dilia. Un lieu où retrouver au quotidien la cuisine italienne que nous aimons : simple, généreuse, faite de produits d'exception."
+    },
+    "menu": {
+      "title": "La Carte",
+      "subtitle": "Antipasti, pâtes & plats",
+      "description": "Chaque jour, découvrez nos antipasti préparés le matin, nos pâtes fraîches, nos plats du jour et nos formules déjeuner. À emporter ou à déguster sur place."
+    },
+    "products": {
+      "title": "Produits",
+      "subtitle": "Épicerie italienne",
+      "description": "Une sélection pointue de produits italiens : huiles d'olive, vinaigres, pâtes sèches, conserves, charcuteries et fromages de producteurs que nous connaissons."
+    },
+    "suppliers": {
+      "title": "Fournisseurs",
+      "subtitle": "Nos producteurs",
+      "description": "Nous travaillons en direct avec des producteurs italiens passionnés, sélectionnés pour la qualité de leurs produits et leur engagement."
+    },
+    "catering": {
+      "title": "Traiteur",
+      "subtitle": "Événements & réceptions",
+      "description": "Pour vos événements d'entreprise, mariages ou occasions privées, Dilietta propose un service traiteur sur mesure, fidèle à l'esprit de générosité italienne."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Nous trouver",
+      "address": "27 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 05",
+      "email": "dilietta@dilia.fr",
+      "hours": {
+        "title": "Horaires",
+        "weekdays": "Lundi - Vendredi : 10h - 19h",
+        "saturday": "Samedi : 10h - 18h",
+        "closed": "Fermé le dimanche"
+      }
+    }
+  }
+}

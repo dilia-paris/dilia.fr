@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Distribution",
+    "subtitle": "Vins italiens pour professionnels"
+  },
+  "sections": {
+    "story": {
+      "title": "Notre Mission",
+      "subtitle": "L'excellence italienne",
+      "description": "Nous importons et distribuons des vins italiens d'exception auprès des restaurants, cavistes et épiceries fines. Notre sélection privilégie les vignerons indépendants et les pratiques durables."
+    },
+    "team": {
+      "title": "Qui Sommes-Nous",
+      "subtitle": "Notre équipe",
+      "description": "Une équipe passionnée, avec une connaissance approfondie du vignoble italien. Nous visitons régulièrement nos producteurs et pouvons vous conseiller sur mesure."
+    },
+    "tasting": {
+      "title": "Dégustation",
+      "subtitle": "Pour professionnels",
+      "description": "Nous organisons des dégustations professionnelles dans nos locaux ou chez vous, pour vous faire découvrir notre gamme et vous aider à constituer votre carte."
+    },
+    "prices": {
+      "title": "Tarifs",
+      "subtitle": "Demande de prix",
+      "description": "Pour recevoir notre catalogue et nos tarifs professionnels, contactez-nous. Nous étudions chaque demande avec attention et proposons des conditions adaptées."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Nous contacter",
+      "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 07",
+      "email": "distribution@dilia.fr",
+      "form": {
+        "name": "Nom",
+        "company": "Entreprise",
+        "email": "Email",
+        "phone": "Téléphone",
+        "message": "Message",
+        "submit": "Envoyer"
+      }
+    }
+  }
+}

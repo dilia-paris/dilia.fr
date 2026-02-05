@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Dilia",
+    "subtitle": "Italian Restaurant"
+  },
+  "sections": {
+    "chef": {
+      "title": "The Chef",
+      "subtitle": "Michele Farnesi",
+      "description": "Born in Tuscany, Michele Farnesi grew up between the kitchens of his two grandmothers. One taught him the art of fresh pasta, the other the art of slow-cooked dishes. This dual heritage feeds his generous and authentic cuisine.",
+      "quote": "Cooking is the love you put into every dish."
+    },
+    "menu": {
+      "title": "The Menu",
+      "subtitle": "Seasonal cuisine",
+      "description": "Our menu evolves with the seasons, showcasing the finest Italian products. From antipasti to desserts, each dish tells a story of tradition and passion."
+    },
+    "wines": {
+      "title": "Wines",
+      "subtitle": "Selection",
+      "description": "A carefully curated cellar of natural and biodynamic Italian wines, selected from independent winemakers we know personally."
+    },
+    "reservation": {
+      "title": "Reservation",
+      "subtitle": "Book your table",
+      "description": "To reserve a table at Dilia, use our online booking system or contact us directly."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Find us",
+      "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 04",
+      "email": "contact@dilia.fr",
+      "hours": {
+        "title": "Hours",
+        "lunch": "Lunch: 12pm - 2:30pm",
+        "dinner": "Dinner: 7pm - 10:30pm",
+        "closed": "Closed on Sunday"
+      }
+    }
+  }
+}

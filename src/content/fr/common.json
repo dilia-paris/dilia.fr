@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "dilia": "Dilia",
+    "dilietta": "Dilietta",
+    "lacave": "La Cave",
+    "distribution": "Distribution",
+    "reservation": "Réservation"
+  },
+  "footer": {
+    "legal": "Mentions légales",
+    "sitemap": "Plan du site",
+    "contact": "Contact",
+    "copyright": "© 2025 Dilia. Tous droits réservés.",
+    "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+    "phone": "+33 1 43 55 54 04"
+  },
+  "buttons": {
+    "discover": "Découvrir",
+    "reserve": "Réserver",
+    "contact": "Nous contacter",
+    "learnMore": "En savoir plus"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English"
+  }
+}

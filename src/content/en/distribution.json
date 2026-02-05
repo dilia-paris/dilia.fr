@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Distribution",
+    "subtitle": "Italian wines for professionals"
+  },
+  "sections": {
+    "story": {
+      "title": "Our Mission",
+      "subtitle": "Italian excellence",
+      "description": "We import and distribute exceptional Italian wines to restaurants, wine merchants and fine grocery stores. Our selection favors independent winemakers and sustainable practices."
+    },
+    "team": {
+      "title": "Who We Are",
+      "subtitle": "Our team",
+      "description": "A passionate team with in-depth knowledge of Italian vineyards. We regularly visit our producers and can provide tailored advice."
+    },
+    "tasting": {
+      "title": "Tasting",
+      "subtitle": "For professionals",
+      "description": "We organize professional tastings at our premises or at your place, to help you discover our range and build your wine list."
+    },
+    "prices": {
+      "title": "Pricing",
+      "subtitle": "Request pricing",
+      "description": "To receive our catalog and professional pricing, contact us. We carefully review each request and offer tailored conditions."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch",
+      "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+      "phone": "+33 1 43 55 54 07",
+      "email": "distribution@dilia.fr",
+      "form": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message",
+        "submit": "Send"
+      }
+    }
+  }
+}

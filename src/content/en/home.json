@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "title": "The Dilia Universe",
+    "subtitle": "Italian cuisine, wines & conviviality"
+  },
+  "sections": {
+    "dilia": {
+      "title": "Dilia",
+      "subtitle": "Restaurant",
+      "description": "Authentic Italian cuisine by Michele Farnesi, blending Tuscan tradition with contemporary creativity.",
+      "tagline": "Italian generosity"
+    },
+    "dilietta": {
+      "title": "Dilietta",
+      "subtitle": "Grocery & Catering",
+      "description": "Your daily gourmet stop. Antipasti, fresh pasta, Italian products and lunch specials.",
+      "tagline": "Italy every day"
+    },
+    "lacave": {
+      "title": "La Cave",
+      "subtitle": "Wine Bar",
+      "description": "A selection of natural Italian and French wines, in the spirit of traditional enoteche.",
+      "tagline": "The soul of great wines"
+    },
+    "distribution": {
+      "title": "Distribution",
+      "subtitle": "B2B",
+      "description": "Import and distribution of exceptional Italian wines for professionals.",
+      "tagline": "Partner for professionals"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "startDate": "2025-02-01",
+  "endDate": "2025-02-14",
+  "fr": "Saint-Valentin — Réservez votre soirée romantique chez Dilia",
+  "en": "Valentine's Day — Book your romantic evening at Dilia",
+  "link": "/dilia#reservation",
+  "dismissible": true
+}
