@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
+import SEOHead from '@/components/SEOHead';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 
@@ -16,6 +17,7 @@ const HomePage = () => {
 
   return (
     <Layout>
+      <SEOHead page="home" />
       {/* Hero */}
       <section className="py-24 md:py-32 lg:py-40 border-b border-border">
         <div className="container mx-auto px-4 text-center">
