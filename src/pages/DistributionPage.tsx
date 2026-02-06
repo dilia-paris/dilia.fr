@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
+import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -25,6 +26,7 @@ const DistributionPage = () => {
 
   return (
     <Layout>
+      <SEOHead page="distribution" />
       <Hero
         title={t('distribution', 'hero.title')}
         subtitle={t('distribution', 'hero.subtitle')}

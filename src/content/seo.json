@@ -1,0 +1,118 @@
+{
+  "siteName": {
+    "fr": "Dilia | L'univers culinaire",
+    "en": "Dilia | Culinary Universe"
+  },
+  "defaultImage": "/og-image.jpg",
+  "defaultImageWidth": 1200,
+  "defaultImageHeight": 630,
+  "defaultImageType": "image/jpeg",
+  "twitterHandle": "@dilia_paris",
+  "facebookPage": "https://www.facebook.com/dilia.paris",
+  "organization": {
+    "name": "Dilia",
+    "logo": "/logo.png",
+    "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+    "telephone": "+33 1 43 55 54 04",
+    "sameAs": [
+      "https://www.facebook.com/dilia.paris",
+      "https://www.instagram.com/dilia.paris"
+    ]
+  },
+  "pages": {
+    "home": {
+      "fr": {
+        "title": "Dilia — L'univers culinaire italien à Paris 11",
+        "description": "Découvrez l'univers Dilia : restaurant gastronomique, épicerie fine, cave à vins et distribution. Une expérience culinaire italienne authentique au cœur de Paris.",
+        "url": "/",
+        "image": "/og-home.jpg",
+        "type": "website"
+      },
+      "en": {
+        "title": "Dilia — Italian Culinary Universe in Paris 11",
+        "description": "Discover the Dilia universe: fine dining restaurant, gourmet grocery, wine bar and distribution. An authentic Italian culinary experience in the heart of Paris.",
+        "url": "/",
+        "image": "/og-home.jpg",
+        "type": "website"
+      }
+    },
+    "dilia": {
+      "fr": {
+        "title": "Dilia Restaurant — Cuisine italienne gastronomique | Paris 11",
+        "description": "Restaurant Dilia, cuisine italienne raffinée par le Chef Michele Farnesi. Réservez votre table au cœur du 11e arrondissement de Paris.",
+        "url": "/dilia",
+        "image": "/og-dilia.jpg",
+        "type": "article",
+        "schemaType": "Restaurant",
+        "priceRange": "€€€",
+        "servesCuisine": "Italian",
+        "openingHours": ["Tu-Sa 12:00-14:30", "Tu-Sa 19:30-22:30"]
+      },
+      "en": {
+        "title": "Dilia Restaurant — Fine Italian Cuisine | Paris 11",
+        "description": "Dilia Restaurant, refined Italian cuisine by Chef Michele Farnesi. Book your table in the heart of Paris' 11th arrondissement.",
+        "url": "/dilia",
+        "image": "/og-dilia.jpg",
+        "type": "article",
+        "schemaType": "Restaurant",
+        "priceRange": "€€€",
+        "servesCuisine": "Italian",
+        "openingHours": ["Tu-Sa 12:00-14:30", "Tu-Sa 19:30-22:30"]
+      }
+    },
+    "dilietta": {
+      "fr": {
+        "title": "Dilietta — Épicerie italienne & Traiteur | Paris 11",
+        "description": "Dilietta, épicerie fine italienne et service traiteur. Produits artisanaux, antipasti, pâtes fraîches et cuisine à emporter au quotidien.",
+        "url": "/dilietta",
+        "image": "/og-dilietta.jpg",
+        "type": "article",
+        "schemaType": "Store"
+      },
+      "en": {
+        "title": "Dilietta — Italian Grocery & Catering | Paris 11",
+        "description": "Dilietta, Italian fine grocery and catering service. Artisanal products, antipasti, fresh pasta and daily takeaway cuisine.",
+        "url": "/dilietta",
+        "image": "/og-dilietta.jpg",
+        "type": "article",
+        "schemaType": "Store"
+      }
+    },
+    "lacave": {
+      "fr": {
+        "title": "La Cave — Bar à vins naturels & Enoteca | Paris 11",
+        "description": "La Cave, bar à vins et enoteca. Sélection de vins naturels, biodynamiques et rares. Dégustations et soirées au cœur de Paris.",
+        "url": "/la-cave",
+        "image": "/og-lacave.jpg",
+        "type": "article",
+        "schemaType": "BarOrPub"
+      },
+      "en": {
+        "title": "La Cave — Natural Wine Bar & Enoteca | Paris 11",
+        "description": "La Cave, wine bar and enoteca. Selection of natural, biodynamic and rare wines. Tastings and events in the heart of Paris.",
+        "url": "/la-cave",
+        "image": "/og-lacave.jpg",
+        "type": "article",
+        "schemaType": "BarOrPub"
+      }
+    },
+    "distribution": {
+      "fr": {
+        "title": "Distribution — Import & distribution de vins italiens | Dilia",
+        "description": "Service de distribution B2B de vins italiens. Import direct de producteurs sélectionnés pour les professionnels de la restauration.",
+        "url": "/distribution",
+        "image": "/og-distribution.jpg",
+        "type": "article",
+        "schemaType": "LocalBusiness"
+      },
+      "en": {
+        "title": "Distribution — Italian Wine Import & Distribution | Dilia",
+        "description": "B2B Italian wine distribution service. Direct import from selected producers for hospitality professionals.",
+        "url": "/distribution",
+        "image": "/og-distribution.jpg",
+        "type": "article",
+        "schemaType": "LocalBusiness"
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
+import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
@@ -23,6 +24,7 @@ const LaCavePage = () => {
 
   return (
     <Layout>
+      <SEOHead page="lacave" />
       <Hero
         title={t('lacave', 'hero.title')}
         subtitle={t('lacave', 'hero.subtitle')}
