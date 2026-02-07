@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Set base path for GitHub Pages - update 'dilia-universe' to your repo name
-  base: mode === "production" ? "/" : "/",
+  base: mode === "production" ? "/dilia.fr/" : "/",
   server: {
     host: "::",
     port: 8080,
