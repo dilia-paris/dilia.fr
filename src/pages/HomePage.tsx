@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import SEOHead from '@/components/SEOHead';
+import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import caveImg from '@/assets/cave/1.JPG';
 
 const HomePage = () => {
   const { t } = useLanguage();
@@ -43,11 +45,7 @@ const HomePage = () => {
             )}
           >
             <div className="container mx-auto px-4">
-              <div
-                className={cn(
-                  "grid md:grid-cols-2 gap-8 md:gap-16 items-center"
-                )}
-              >
+              <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 {/* Content */}
                 <div className={cn("space-y-6", !isLeft && "md:order-2")}>
                   <span className="text-sm tracking-widest uppercase opacity-60">
@@ -71,17 +69,14 @@ const HomePage = () => {
                   </Link>
                 </div>
 
-                {/* Image Placeholder */}
-                <div
-                  className={cn(
-                    "aspect-[4/3] bg-background border border-border flex items-center justify-center",
-                    !isLeft && "md:order-1",
-                    index % 2 === 1 && "bg-background"
-                  )}
-                >
-                  <span className="text-sm tracking-widest uppercase opacity-30">
-                    Photo
-                  </span>
+                {/* Image */}
+                <div className={cn(!isLeft && "md:order-1")}>
+                  <OptimizedImage
+                    src={caveImg}
+                    alt={t('home', `sections.${section.key}.title`)}
+                    size="content"
+                    aspectRatio="4/3"
+                  />
                 </div>
               </div>
             </div>

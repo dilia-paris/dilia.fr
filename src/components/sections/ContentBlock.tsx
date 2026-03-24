@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
+import OptimizedImage from '@/components/OptimizedImage';
 
 interface ContentBlockProps {
   align?: 'left' | 'right';
@@ -10,6 +11,8 @@ interface ContentBlockProps {
   children?: ReactNode;
   id?: string;
   showPlaceholder?: boolean;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 const ContentBlock = ({
@@ -21,6 +24,8 @@ const ContentBlock = ({
   children,
   id,
   showPlaceholder = true,
+  imageSrc,
+  imageAlt = 'Photo',
 }: ContentBlockProps) => {
   const isLeft = align === 'left';
 
@@ -54,17 +59,16 @@ const ContentBlock = ({
             {children}
           </div>
 
-          {/* Image Placeholder */}
+          {/* Image */}
           {showPlaceholder && (
-            <div
-              className={cn(
-                "aspect-[4/3] bg-muted border border-border flex items-center justify-center",
-                !isLeft && "md:order-1"
-              )}
-            >
-              <span className="text-sm tracking-widest uppercase opacity-30">
-                Photo
-              </span>
+            <div className={cn(!isLeft && "md:order-1")}>
+              <OptimizedImage
+                src={imageSrc || ''}
+                alt={imageAlt}
+                size="content"
+                aspectRatio="4/3"
+                placeholderText="Photo"
+              />
             </div>
           )}
         </div>

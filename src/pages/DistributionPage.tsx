@@ -8,6 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import caveImg from '@/assets/cave/1.JPG';
 
 const DistributionPage = () => {
   const { t } = useLanguage();
@@ -38,6 +39,8 @@ const DistributionPage = () => {
         title={t('distribution', 'sections.story.title')}
         subtitle={t('distribution', 'sections.story.subtitle')}
         description={t('distribution', 'sections.story.description')}
+        imageSrc={caveImg}
+        imageAlt="Distribution"
       />
 
       <div className="bg-muted">
@@ -47,6 +50,8 @@ const DistributionPage = () => {
           title={t('distribution', 'sections.team.title')}
           subtitle={t('distribution', 'sections.team.subtitle')}
           description={t('distribution', 'sections.team.description')}
+          imageSrc={caveImg}
+          imageAlt="Team"
         />
       </div>
 
@@ -56,6 +61,8 @@ const DistributionPage = () => {
         title={t('distribution', 'sections.tasting.title')}
         subtitle={t('distribution', 'sections.tasting.subtitle')}
         description={t('distribution', 'sections.tasting.description')}
+        imageSrc={caveImg}
+        imageAlt="Tasting"
       />
 
       <div className="bg-muted">
