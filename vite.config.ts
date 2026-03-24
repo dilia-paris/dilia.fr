@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  assetsInclude: ['**/*.JPG', '**/*.JPEG', '**/*.PNG', '**/*.WEBP'],
   // Set base path for GitHub Pages - update 'dilia-universe' to your repo name
   // Set base to your repo name: "/repo-name/" or "/" if using custom domain
   base: mode === "production" ? "/dilia.fr/" : "/",
