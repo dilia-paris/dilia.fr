@@ -5,7 +5,10 @@ import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
+import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import img from '@/assets/cave/1.JPG'
+
 
 const LaCavePage = () => {
   const { t } = useLanguage();
@@ -28,15 +31,15 @@ const LaCavePage = () => {
       <Hero
         title={t('lacave', 'hero.title')}
         subtitle={t('lacave', 'hero.subtitle')}
-      />
-
+        />
       <ContentBlock
         id="story"
         align="left"
         title={t('lacave', 'sections.story.title')}
         subtitle={t('lacave', 'sections.story.subtitle')}
         description={t('lacave', 'sections.story.description')}
-      />
+      /> 
+      <OptimizedImage src={img} alt="Dilia restaurant" size="hero" />
 
       <div className="bg-muted">
         <ContentBlock
