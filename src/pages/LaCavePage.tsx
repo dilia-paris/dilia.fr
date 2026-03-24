@@ -7,8 +7,7 @@ import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
 import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import img from '@/assets/cave/1.JPG'
-
+import caveImg from '@/assets/cave/1.JPG';
 
 const LaCavePage = () => {
   const { t } = useLanguage();
@@ -31,15 +30,17 @@ const LaCavePage = () => {
       <Hero
         title={t('lacave', 'hero.title')}
         subtitle={t('lacave', 'hero.subtitle')}
-        />
+      />
+
       <ContentBlock
         id="story"
         align="left"
         title={t('lacave', 'sections.story.title')}
         subtitle={t('lacave', 'sections.story.subtitle')}
         description={t('lacave', 'sections.story.description')}
-      /> 
-      <OptimizedImage src={img} alt="Dilia restaurant" size="hero" />
+        imageSrc={caveImg}
+        imageAlt="La Cave"
+      />
 
       <div className="bg-muted">
         <ContentBlock
@@ -48,6 +49,8 @@ const LaCavePage = () => {
           title={t('lacave', 'sections.wines.title')}
           subtitle={t('lacave', 'sections.wines.subtitle')}
           description={t('lacave', 'sections.wines.description')}
+          imageSrc={caveImg}
+          imageAlt="Wines"
         />
       </div>
 
@@ -57,9 +60,11 @@ const LaCavePage = () => {
         title={t('lacave', 'sections.events.title')}
         subtitle={t('lacave', 'sections.events.subtitle')}
         description={t('lacave', 'sections.events.description')}
+        imageSrc={caveImg}
+        imageAlt="Events"
       />
 
-      {/* Photo Gallery Placeholder */}
+      {/* Photo Gallery */}
       <section id="photos" className="py-16 md:py-24 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -76,14 +81,13 @@ const LaCavePage = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div 
-                key={i} 
-                className="aspect-square bg-background border border-border flex items-center justify-center"
-              >
-                <span className="text-sm tracking-widest uppercase opacity-30">
-                  Photo {i}
-                </span>
-              </div>
+              <OptimizedImage
+                key={i}
+                src={caveImg}
+                alt={`Gallery ${i}`}
+                size="gallery"
+                aspectRatio="1/1"
+              />
             ))}
           </div>
         </div>

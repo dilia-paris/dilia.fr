@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
 import { useLanguage } from '@/contexts/LanguageContext';
+import caveImg from '@/assets/cave/1.JPG';
 
 const DiliaPage = () => {
   const { t } = useLanguage();
@@ -36,6 +37,8 @@ const DiliaPage = () => {
         title={t('dilia', 'sections.chef.title')}
         subtitle={t('dilia', 'sections.chef.subtitle')}
         description={t('dilia', 'sections.chef.description')}
+        imageSrc={caveImg}
+        imageAlt="Chef"
       >
         <blockquote className="border-l-2 border-foreground/20 pl-4 italic opacity-70">
           "{t('dilia', 'sections.chef.quote')}"
@@ -49,6 +52,8 @@ const DiliaPage = () => {
           title={t('dilia', 'sections.menu.title')}
           subtitle={t('dilia', 'sections.menu.subtitle')}
           description={t('dilia', 'sections.menu.description')}
+          imageSrc={caveImg}
+          imageAlt="Menu"
         />
       </div>
 
@@ -58,6 +63,8 @@ const DiliaPage = () => {
         title={t('dilia', 'sections.wines.title')}
         subtitle={t('dilia', 'sections.wines.subtitle')}
         description={t('dilia', 'sections.wines.description')}
+        imageSrc={caveImg}
+        imageAlt="Wines"
       />
 
       {/* Reservation Section with iframe placeholder */}

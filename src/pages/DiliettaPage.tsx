@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
 import { useLanguage } from '@/contexts/LanguageContext';
+import caveImg from '@/assets/cave/1.JPG';
 
 const DiliettaPage = () => {
   const { t } = useLanguage();
@@ -36,6 +37,8 @@ const DiliettaPage = () => {
         title={t('dilietta', 'sections.story.title')}
         subtitle={t('dilietta', 'sections.story.subtitle')}
         description={t('dilietta', 'sections.story.description')}
+        imageSrc={caveImg}
+        imageAlt="Dilietta"
       />
 
       <div className="bg-muted">
@@ -45,6 +48,8 @@ const DiliettaPage = () => {
           title={t('dilietta', 'sections.menu.title')}
           subtitle={t('dilietta', 'sections.menu.subtitle')}
           description={t('dilietta', 'sections.menu.description')}
+          imageSrc={caveImg}
+          imageAlt="Menu"
         />
       </div>
 
@@ -54,6 +59,8 @@ const DiliettaPage = () => {
         title={t('dilietta', 'sections.products.title')}
         subtitle={t('dilietta', 'sections.products.subtitle')}
         description={t('dilietta', 'sections.products.description')}
+        imageSrc={caveImg}
+        imageAlt="Products"
       />
 
       <div className="bg-muted">
@@ -63,6 +70,8 @@ const DiliettaPage = () => {
           title={t('dilietta', 'sections.suppliers.title')}
           subtitle={t('dilietta', 'sections.suppliers.subtitle')}
           description={t('dilietta', 'sections.suppliers.description')}
+          imageSrc={caveImg}
+          imageAlt="Suppliers"
         />
       </div>
 
@@ -72,6 +81,8 @@ const DiliettaPage = () => {
         title={t('dilietta', 'sections.catering.title')}
         subtitle={t('dilietta', 'sections.catering.subtitle')}
         description={t('dilietta', 'sections.catering.description')}
+        imageSrc={caveImg}
+        imageAlt="Catering"
       />
 
       <ContactSection
