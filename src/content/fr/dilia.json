@@ -1,13 +1,13 @@
 {
   "hero": {
     "title": "Dilia",
-    "subtitle": "Restaurant italien"
+    "subtitle": "Une petite institution au cœur du 20ème arrondissement"
   },
   "sections": {
     "chef": {
       "title": "Le Chef",
       "subtitle": "Michele Farnesi",
-      "description": "Né en Toscane, Michele Farnesi a grandi entre les cuisines de ses deux grands-mères. L'une lui a transmis l'art des pâtes fraîches, l'autre celui des plats mijotés. Cette double héritage nourrit sa cuisine généreuse et authentique.",
+      "description": "Installé depuis plus de dix ans dans le quartier, Dilia est devenu une adresse incontournable, une maison où l'on revient, où l'on se sent chez soi. Un lieu à l'image de sa cuisine : sincère, chaleureuse et personnelle.\n\nAux commandes, le chef Michele Farnesi signe une cuisine inspirée de ses origines toscanes. Une cuisine franche, précise dans les saveurs et les cuissons, sans artifices. Le nom Dilia est un hommage à ses grands-parents, et plus particulièrement à ses deux grands-mères, grandes cuisinières du quotidien : Ilia, experte des bouillons, a transmis à Michele ses secrets pour des bouillons parfaitement équilibrés et Immola, dont la spécialité était le lapin in umido, incarne cette Toscane généreuse et terrienne qui nourrit encore aujourd'hui l'esprit de la carte.\n\nLe parcours de Michele est fait de rencontres et de voyages. Il débute à Alba, où le chef Fulvio le prend sous son aile, avant de poursuivre à Stockholm et Modène. À Paris, il rejoint les cuisines de Giovanni Passerini chez Rino, prend son premier poste de chef chez Heimat, mais très vite rêve d'indépendance.\n\nIl est tombé amoureux de cet endroit dès la première fois qu'il l'a vu, c'est donc naturellement que lorsque Michele a décidé de s'installer, il est allé voir son ami Simone Tondo, alors aux commandes de Roseval, et lui a proposé de reprendre le restaurant. Quelques mois plus tard, Dilia était lancé.",
       "quote": "La cuisine, c'est l'amour que l'on met dans chaque assiette."
     },
     "menu": {
@@ -18,7 +18,7 @@
     "wines": {
       "title": "Les Vins",
       "subtitle": "Sélection",
-      "description": "Une cave soigneusement constituée de vins italiens naturels et biodynamiques, sélectionnés auprès de vignerons indépendants que nous connaissons personnellement."
+      "description": "Le vin occupe une place centrale au restaurant notamment grâce à Daniele, responsable passionné, qui accompagne chaque table avec attention et justesse et à Dilia La Cave, d'où de nombreux vins sont importés directement auprès de vignerons italiens."
     },
     "reservation": {
       "title": "Réservation",
@@ -28,7 +28,7 @@
     "contact": {
       "title": "Contact",
       "subtitle": "Nous trouver",
-      "address": "25 rue de la Fontaine au Roi, 75011 Paris",
+      "address": "1 Rue d'Eupatoria, 75020 Paris",
       "phone": "+33 1 43 55 54 04",
       "email": "contact@dilia.fr",
       "hours": {

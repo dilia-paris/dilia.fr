@@ -4,11 +4,14 @@ import Layout from '@/components/layout/Layout';
 import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
+import SectionNav from '@/components/sections/SectionNav';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import caveImg from '@/assets/cave/1.JPG';
+import muni from '@/assets/cave/bouteille cave 4.JPG';
+import eben from '@/assets/cave/bouteille 11.JPG';
+import rugoli from '@/assets/cave/bouteilles cave 3.JPG';
 
 const DistributionPage = () => {
   const { t } = useLanguage();
@@ -25,6 +28,14 @@ const DistributionPage = () => {
     }
   }, [location]);
 
+  const sections = [
+    { id: 'story', label: t('distribution', 'sections.story.title') },
+    { id: 'team', label: t('distribution', 'sections.team.title') },
+    { id: 'tasting', label: t('distribution', 'sections.tasting.title') },
+    { id: 'prices', label: t('distribution', 'sections.prices.title') },
+    { id: 'contact', label: t('distribution', 'sections.contact.title') },
+  ];
+
   return (
     <Layout>
       <SEOHead page="distribution" />
@@ -32,6 +43,7 @@ const DistributionPage = () => {
         title={t('distribution', 'hero.title')}
         subtitle={t('distribution', 'hero.subtitle')}
       />
+      <SectionNav sections={sections} />
 
       <ContentBlock
         id="story"
@@ -39,7 +51,7 @@ const DistributionPage = () => {
         title={t('distribution', 'sections.story.title')}
         subtitle={t('distribution', 'sections.story.subtitle')}
         description={t('distribution', 'sections.story.description')}
-        imageSrc={caveImg}
+        imageSrc={muni}
         imageAlt="Distribution"
       />
 
@@ -50,7 +62,7 @@ const DistributionPage = () => {
           title={t('distribution', 'sections.team.title')}
           subtitle={t('distribution', 'sections.team.subtitle')}
           description={t('distribution', 'sections.team.description')}
-          imageSrc={caveImg}
+          imageSrc={eben}
           imageAlt="Team"
         />
       </div>
@@ -61,7 +73,7 @@ const DistributionPage = () => {
         title={t('distribution', 'sections.tasting.title')}
         subtitle={t('distribution', 'sections.tasting.subtitle')}
         description={t('distribution', 'sections.tasting.description')}
-        imageSrc={caveImg}
+        imageSrc={rugoli}
         imageAlt="Tasting"
       />
 

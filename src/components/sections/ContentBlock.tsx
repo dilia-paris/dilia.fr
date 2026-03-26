@@ -48,7 +48,7 @@ const ContentBlock = ({
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
               {title}
             </h2>
-            <p className="text-base md:text-lg leading-relaxed opacity-80">
+            <p className="text-base md:text-lg leading-relaxed opacity-80 whitespace-pre-line">
               {description}
             </p>
             {tagline && (

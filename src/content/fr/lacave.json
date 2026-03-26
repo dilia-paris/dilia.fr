@@ -1,33 +1,33 @@
 {
   "hero": {
-    "title": "La Cave",
-    "subtitle": "Bar à Vins"
+    "title": "Dilia la Cave",
+    "subtitle": "Le goût du vin et du partage"
   },
   "sections": {
     "story": {
       "title": "L'Histoire",
-      "subtitle": "L'esprit enoteca",
-      "description": "La Cave est née de notre passion pour les vins naturels. Dans l'esprit des enoteche italiennes, nous proposons une sélection de vins à déguster sur place, accompagnés de petites assiettes."
+      "subtitle": "Ouverte en 2021",
+      "description": "Ouverte en octobre 2021, Dilia la Cave prolonge l’esprit du restaurant à travers une sélection de vins pensée comme un voyage entre l’Italie et la France. Plus qu’une cave, c’est une enoteca de quartier, vivante et conviviale, dédiée aux vignerons engagés et aux bouteilles de caractère."
     },
     "wines": {
       "title": "Les Vins",
       "subtitle": "Notre sélection",
-      "description": "Vins naturels, biodynamiques et rares. Italiens principalement, mais aussi quelques pépites françaises. Chaque bouteille raconte l'histoire d'un vigneron passionné."
+      "description": "La sélection fait la part belle aux vins biologiques, biodynamiques et naturels, majoritairement importés en direct de vignerons italiens. On y retrouve notamment des références rares et originales, parfois introuvables ailleurs, qui s'accordent à merveille avec la cuisine de Dilia. Que ce soit pour constituer sa cave personnelle, offrir un cadeau avec sens ou partager un vin exceptionnel entre amis, chaque visite est une découverte."
     },
     "events": {
-      "title": "Événements",
-      "subtitle": "Dégustations & soirées",
-      "description": "Régulièrement, nous organisons des dégustations thématiques, des rencontres avec des vignerons et des soirées spéciales."
+      "title": "Apéritif & Cicchetti",
+      "subtitle": "Un moment à partager",
+      "description": "La Cave est également un lieu d'apéritif. On s'y retrouve autour de vins au verre, accompagnés de cicchetti préparés chez Dilietta, juste à côté, à partir des produits de la maison, de la focaccia maison et d'une sélection de charcuteries italiennes."
     },
     "photos": {
       "title": "Photos",
       "subtitle": "L'ambiance",
-      "description": "Découvrez l'atmosphère chaleureuse de La Cave à travers nos images."
+      "description": "Dilia la Cave est une invitation au partage, à la curiosité et au plaisir — celui du bon vin, raconté avec passion."
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Nous trouver",
-      "address": "23 rue de la Fontaine au Roi, 75011 Paris",
+      "address": "30 Rue Etienne Dolet, 75020 Paris",
       "phone": "+33 1 43 55 54 06",
       "email": "lacave@dilia.fr",
       "hours": {

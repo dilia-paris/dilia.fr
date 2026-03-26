@@ -1,25 +1,25 @@
 {
   "hero": {
     "title": "L'Univers Dilia",
-    "subtitle": "Cuisine italienne, vins & convivialité"
+    "subtitle": "Trois lieux, un même esprit"
   },
   "sections": {
     "dilia": {
       "title": "Dilia",
       "subtitle": "Restaurant",
-      "description": "Une cuisine italienne authentique signée Michele Farnesi, entre tradition toscane et créativité contemporaine.",
+      "description": "Depuis plus de dix ans, Dilia raconte la cuisine italienne de Michele Farnesi : franche, précise et généreuse, inspirée de ses origines toscanes et des souvenirs de sa famille. Le nom de la maison rend hommage à ses grands-parents et à l'amour du goût qu'ils lui ont transmis. Dans un cadre chaleureux et intimiste, les plats sont accompagnés d'une sélection de vins choisis avec soin.",
       "tagline": "La générosité à l'italienne"
     },
     "dilietta": {
       "title": "Dilietta",
       "subtitle": "Épicerie & Traiteur",
-      "description": "Votre escale gourmande au quotidien. Antipasti, pâtes fraîches, produits italiens et formules déjeuner.",
+      "description": "Dilietta, ouverte en 2024, propose la cuisine de Michele de manière plus accessible et quotidienne. Antipasti, pâtes fraîches, lasagnes, focaccia, cicchetti et douceurs maison rythment la vie du quartier. Chaque midi, une formule autour de pizza fritta ou focaccia farcie permet un déjeuner rapide et gourmand. Dilietta propose aussi des prestations de traiteur pour mariages, événements ou réunions d'entreprise.",
       "tagline": "L'Italie au quotidien"
     },
     "lacave": {
       "title": "La Cave",
       "subtitle": "Bar à Vins",
-      "description": "Une sélection de vins naturels italiens et français, dans l'esprit des enoteche traditionnelles.",
+      "description": "Dilia la Cave, ouverte en 2021, prolonge l'expérience par le vin. On y découvre des références rares et originales, parfois introuvables ailleurs, et l'on peut partager un verre autour de cicchetti, focaccia maison et charcuteries italiennes, ou repartir avec une bouteille pour sa cave personnelle.",
       "tagline": "L'âme des grands crus"
     },
     "distribution": {

@@ -1,25 +1,25 @@
 {
   "hero": {
     "title": "The Dilia Universe",
-    "subtitle": "Italian cuisine, wines & conviviality"
+    "subtitle": "Three places, one spirit"
   },
   "sections": {
     "dilia": {
       "title": "Dilia",
       "subtitle": "Restaurant",
-      "description": "Authentic Italian cuisine by Michele Farnesi, blending Tuscan tradition with contemporary creativity.",
+      "description": "For over ten years, Dilia has been telling the story of Michele Farnesi's Italian cuisine: honest, precise and generous, inspired by his Tuscan roots and family memories. The restaurant's name pays homage to his grandparents and their love of good food passed down to him. In a warm and intimate setting, dishes are accompanied by a carefully selected wine list.",
       "tagline": "Italian generosity"
     },
     "dilietta": {
       "title": "Dilietta",
       "subtitle": "Grocery & Catering",
-      "description": "Your daily gourmet stop. Antipasti, fresh pasta, Italian products and lunch specials.",
+      "description": "Dilietta, opened in 2024, offers Michele's cuisine in a more accessible and everyday way. Antipasti, fresh pasta, lasagna, focaccia, cicchetti and homemade sweets bring life to the neighborhood. Every day at lunchtime, a set menu featuring pizza fritta or stuffed focaccia provides a quick and gourmet meal. Dilietta also offers catering services for weddings, events and corporate functions.",
       "tagline": "Italy every day"
     },
     "lacave": {
       "title": "La Cave",
       "subtitle": "Wine Bar",
-      "description": "A selection of natural Italian and French wines, in the spirit of traditional enoteche.",
+      "description": "Dilia la Cave, opened in 2021, extends the experience through wine. Here you'll discover rare and original references, sometimes unavailable elsewhere, and you can share a glass over cicchetti, homemade focaccia and Italian charcuterie, or take home a bottle for your personal cellar.",
       "tagline": "The soul of great wines"
     },
     "distribution": {

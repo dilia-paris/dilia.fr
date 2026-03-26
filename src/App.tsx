@@ -9,6 +9,7 @@ import DiliaPage from "./pages/DiliaPage";
 import DiliettaPage from "./pages/DiliettaPage";
 import LaCavePage from "./pages/LaCavePage";
 import DistributionPage from "./pages/DistributionPage";
+import LegalPage from "./pages/LegalPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/dilietta" element={<DiliettaPage />} />
             <Route path="/la-cave" element={<LaCavePage />} />
             <Route path="/distribution" element={<DistributionPage />} />
+            <Route path="/legal" element={<LegalPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

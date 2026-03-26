@@ -5,8 +5,13 @@ import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
+import SectionNav from '@/components/sections/SectionNav';
 import { useLanguage } from '@/contexts/LanguageContext';
-import caveImg from '@/assets/cave/1.JPG';
+import histoire from '@/assets/dilieta/pizza fritta.JPG';
+import fournisseur from '@/assets/dilieta/fournisseur.JPG';
+import menu from '@/assets/dilieta/carte.JPG';
+import produit from '@/assets/dilieta/vitrine 5.JPG';
+import traiteur from '@/assets/dilieta/traiteur 1.JPG';
 
 const DiliettaPage = () => {
   const { t } = useLanguage();
@@ -23,6 +28,15 @@ const DiliettaPage = () => {
     }
   }, [location]);
 
+  const sections = [
+    { id: 'story', label: t('dilietta', 'sections.story.title') },
+    { id: 'menu', label: t('dilietta', 'sections.menu.title') },
+    { id: 'products', label: t('dilietta', 'sections.products.title') },
+    { id: 'suppliers', label: t('dilietta', 'sections.suppliers.title') },
+    { id: 'catering', label: t('dilietta', 'sections.catering.title') },
+    { id: 'contact', label: t('dilietta', 'sections.contact.title') },
+  ];
+
   return (
     <Layout>
       <SEOHead page="dilietta" />
@@ -30,6 +44,7 @@ const DiliettaPage = () => {
         title={t('dilietta', 'hero.title')}
         subtitle={t('dilietta', 'hero.subtitle')}
       />
+      <SectionNav sections={sections} />
 
       <ContentBlock
         id="story"
@@ -37,7 +52,7 @@ const DiliettaPage = () => {
         title={t('dilietta', 'sections.story.title')}
         subtitle={t('dilietta', 'sections.story.subtitle')}
         description={t('dilietta', 'sections.story.description')}
-        imageSrc={caveImg}
+        imageSrc={histoire}
         imageAlt="Dilietta"
       />
 
@@ -48,7 +63,7 @@ const DiliettaPage = () => {
           title={t('dilietta', 'sections.menu.title')}
           subtitle={t('dilietta', 'sections.menu.subtitle')}
           description={t('dilietta', 'sections.menu.description')}
-          imageSrc={caveImg}
+          imageSrc={menu}
           imageAlt="Menu"
         />
       </div>
@@ -59,7 +74,7 @@ const DiliettaPage = () => {
         title={t('dilietta', 'sections.products.title')}
         subtitle={t('dilietta', 'sections.products.subtitle')}
         description={t('dilietta', 'sections.products.description')}
-        imageSrc={caveImg}
+        imageSrc={produit}
         imageAlt="Products"
       />
 
@@ -70,7 +85,7 @@ const DiliettaPage = () => {
           title={t('dilietta', 'sections.suppliers.title')}
           subtitle={t('dilietta', 'sections.suppliers.subtitle')}
           description={t('dilietta', 'sections.suppliers.description')}
-          imageSrc={caveImg}
+          imageSrc={fournisseur}
           imageAlt="Suppliers"
         />
       </div>
@@ -81,7 +96,7 @@ const DiliettaPage = () => {
         title={t('dilietta', 'sections.catering.title')}
         subtitle={t('dilietta', 'sections.catering.subtitle')}
         description={t('dilietta', 'sections.catering.description')}
-        imageSrc={caveImg}
+        imageSrc={traiteur}
         imageAlt="Catering"
       />
 

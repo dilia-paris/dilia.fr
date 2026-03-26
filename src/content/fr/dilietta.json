@@ -1,18 +1,18 @@
 {
   "hero": {
     "title": "Dilietta",
-    "subtitle": "Épicerie & Traiteur"
+    "subtitle": "La cuisine de tous les jours, signée Michele Farnesi"
   },
   "sections": {
     "story": {
       "title": "L'Histoire",
       "subtitle": "Née en 2024",
-      "description": "Dilietta est l'extension naturelle de l'univers Dilia. Un lieu où retrouver au quotidien la cuisine italienne que nous aimons : simple, généreuse, faite de produits d'exception."
+      "description": "Ouvert en septembre 2024, Dilietta est né d'une envie simple : faire vivre la cuisine de Michele Farnesi au quotidien, dans une version plus accessible, généreuse et spontanée. Une adresse pensée pour le quartier, pour y passer souvent, à toute heure, sans occasion particulière.\n\nOn y retrouve l'essence de la cuisine de Michele à travers un large choix d'antipasti, qui évoluent au fil des saisons, des pâtes fraîches réalisées sur place, une belle sélection de douceurs maison, ainsi qu'une charcuterie italienne d'exception d'Osvaldo. La carte est complétée par de nombreux produits d'épicerie italienne, sourcés directement par le chef auprès de producteurs.\n\nDilietta, c'est la cuisine italienne vivante, quotidienne et joyeuse — celle que l'on aime retrouver, encore et encore."
     },
     "menu": {
       "title": "La Carte",
       "subtitle": "Antipasti, pâtes & plats",
-      "description": "Chaque jour, découvrez nos antipasti préparés le matin, nos pâtes fraîches, nos plats du jour et nos formules déjeuner. À emporter ou à déguster sur place."
+      "description": "Chaque midi, Dilietta propose une formule déjeuner avec pizza fritta ou focaccia farcie, idéale pour un dèj gourmand et rapide.\n\nParmi les incontournables de la maison : les lasagnes, les maritozzi, la focaccia maison et les cicchetti, devenus des signatures."
     },
     "products": {
       "title": "Produits",
@@ -27,13 +27,13 @@
     "catering": {
       "title": "Traiteur",
       "subtitle": "Événements & réceptions",
-      "description": "Pour vos événements d'entreprise, mariages ou occasions privées, Dilietta propose un service traiteur sur mesure, fidèle à l'esprit de générosité italienne."
+      "description": "Au-delà de la table, Dilietta accompagne aussi vos événements et moments de partage à travers des prestations de traiteur : réunions d'entreprise, mariages, événements privés ou professionnels, toujours avec la même exigence de goût et de générosité."
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Nous trouver",
-      "address": "27 rue de la Fontaine au Roi, 75011 Paris",
-      "phone": "+33 1 43 55 54 05",
+      "address": "26 Rue Etienne Dolet, 75020 Paris",
+      "phone": "+33 1 73 75 10 49",
       "email": "dilietta@dilia.fr",
       "hours": {
         "title": "Horaires",

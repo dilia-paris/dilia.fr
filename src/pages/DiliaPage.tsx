@@ -5,12 +5,26 @@ import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
+import SectionNav from '@/components/sections/SectionNav';
 import { useLanguage } from '@/contexts/LanguageContext';
-import caveImg from '@/assets/cave/1.JPG';
+import michele from '@/assets/dilia/DILIA 2024 michele travail.jpg';
+import menu from '@/assets/dilia/1000 feuille truffe.JPG';
+import vin from '@/assets/dilia/DILIA 2024 bar.jpg';
 
 const DiliaPage = () => {
   const { t } = useLanguage();
   const location = useLocation();
+
+  useEffect(() => {
+    // Load Zenchef SDK script
+    const existingScript = document.getElementById('zenchef-sdk');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'zenchef-sdk';
+      script.src = 'https://sdk.zenchef.com/v1/sdk.min.js';
+      document.head.appendChild(script);
+    }
+  }, []);
 
   useEffect(() => {
     if (location.hash) {
@@ -23,6 +37,14 @@ const DiliaPage = () => {
     }
   }, [location]);
 
+  const sections = [
+    { id: 'chef', label: t('dilia', 'sections.chef.title') },
+    { id: 'menu', label: t('dilia', 'sections.menu.title') },
+    { id: 'wines', label: t('dilia', 'sections.wines.title') },
+    { id: 'reservation', label: t('dilia', 'sections.reservation.title') },
+    { id: 'contact', label: t('dilia', 'sections.contact.title') },
+  ];
+
   return (
     <Layout>
       <SEOHead page="dilia" />
@@ -30,6 +52,7 @@ const DiliaPage = () => {
         title={t('dilia', 'hero.title')}
         subtitle={t('dilia', 'hero.subtitle')}
       />
+      <SectionNav sections={sections} />
 
       <ContentBlock
         id="chef"
@@ -37,7 +60,7 @@ const DiliaPage = () => {
         title={t('dilia', 'sections.chef.title')}
         subtitle={t('dilia', 'sections.chef.subtitle')}
         description={t('dilia', 'sections.chef.description')}
-        imageSrc={caveImg}
+        imageSrc={michele}
         imageAlt="Chef"
       >
         <blockquote className="border-l-2 border-foreground/20 pl-4 italic opacity-70">
@@ -52,7 +75,7 @@ const DiliaPage = () => {
           title={t('dilia', 'sections.menu.title')}
           subtitle={t('dilia', 'sections.menu.subtitle')}
           description={t('dilia', 'sections.menu.description')}
-          imageSrc={caveImg}
+          imageSrc={menu}
           imageAlt="Menu"
         />
       </div>
@@ -63,7 +86,7 @@ const DiliaPage = () => {
         title={t('dilia', 'sections.wines.title')}
         subtitle={t('dilia', 'sections.wines.subtitle')}
         description={t('dilia', 'sections.wines.description')}
-        imageSrc={caveImg}
+        imageSrc={vin}
         imageAlt="Wines"
       />
 
@@ -81,12 +104,19 @@ const DiliaPage = () => {
               {t('dilia', 'sections.reservation.description')}
             </p>
             
-            {/* TheFork iframe placeholder */}
-            <div className="aspect-[4/3] md:aspect-[16/9] bg-background border border-border flex items-center justify-center">
-              <span className="text-sm tracking-widest uppercase opacity-30">
-                TheFork Widget
-              </span>
-            </div>
+            {/* Zenchef Reservation Widget */}
+            <iframe
+              src="https://bookings.zenchef.com/results?rid=353401&fullscreen=1"
+              scrolling="yes"
+              width="100%"
+              height="1900"
+              style={{
+                display: 'block',
+                margin: '0 auto',
+                maxWidth: '600px',
+                border: '1em solid black'
+              }}
+            />
           </div>
         </div>
       </section>

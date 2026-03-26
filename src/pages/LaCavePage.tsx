@@ -5,9 +5,18 @@ import SEOHead from '@/components/SEOHead';
 import Hero from '@/components/sections/Hero';
 import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
+import SectionNav from '@/components/sections/SectionNav';
 import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import caveImg from '@/assets/cave/1.JPG';
+import histoire from '@/assets/cave/histoire.JPG';
+import vin from '@/assets/cave/vin.JPG';
+import evenement from '@/assets/cave/evenement.JPG';
+import un from '@/assets/cave/1.JPG';
+import deux from '@/assets/cave/2.JPG';
+import trois from '@/assets/cave/3.JPG';
+import quatre from '@/assets/cave/4.JPG';
+import cinq from '@/assets/cave/5.JPG';
+import six from '@/assets/cave/6.JPG';
 
 const LaCavePage = () => {
   const { t } = useLanguage();
@@ -24,6 +33,14 @@ const LaCavePage = () => {
     }
   }, [location]);
 
+  const sections = [
+    { id: 'story', label: t('lacave', 'sections.story.title') },
+    { id: 'wines', label: t('lacave', 'sections.wines.title') },
+    { id: 'events', label: t('lacave', 'sections.events.title') },
+    { id: 'photos', label: t('lacave', 'sections.photos.title') },
+    { id: 'contact', label: t('lacave', 'sections.contact.title') },
+  ];
+
   return (
     <Layout>
       <SEOHead page="lacave" />
@@ -31,6 +48,7 @@ const LaCavePage = () => {
         title={t('lacave', 'hero.title')}
         subtitle={t('lacave', 'hero.subtitle')}
       />
+      <SectionNav sections={sections} />
 
       <ContentBlock
         id="story"
@@ -38,7 +56,7 @@ const LaCavePage = () => {
         title={t('lacave', 'sections.story.title')}
         subtitle={t('lacave', 'sections.story.subtitle')}
         description={t('lacave', 'sections.story.description')}
-        imageSrc={caveImg}
+        imageSrc={histoire}
         imageAlt="La Cave"
       />
 
@@ -49,7 +67,7 @@ const LaCavePage = () => {
           title={t('lacave', 'sections.wines.title')}
           subtitle={t('lacave', 'sections.wines.subtitle')}
           description={t('lacave', 'sections.wines.description')}
-          imageSrc={caveImg}
+          imageSrc={vin}
           imageAlt="Wines"
         />
       </div>
@@ -60,7 +78,7 @@ const LaCavePage = () => {
         title={t('lacave', 'sections.events.title')}
         subtitle={t('lacave', 'sections.events.subtitle')}
         description={t('lacave', 'sections.events.description')}
-        imageSrc={caveImg}
+        imageSrc={evenement}
         imageAlt="Events"
       />
 
@@ -80,15 +98,63 @@ const LaCavePage = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
               <OptimizedImage
-                key={i}
-                src={caveImg}
-                alt={`Gallery ${i}`}
+                key={1}
+                src={un}
+                alt={`Gallery 1`}
                 size="gallery"
                 aspectRatio="1/1"
               />
-            ))}
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <OptimizedImage
+                key={2}
+                src={deux}
+                alt={`Gallery 2`}
+                size="gallery"
+                aspectRatio="1/1"
+              />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <OptimizedImage
+                key={3}
+                src={trois}
+                alt={`Gallery 3`}
+                size="gallery"
+                aspectRatio="1/1"
+              />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <OptimizedImage
+                key={4}
+                src={quatre}
+                alt={`Gallery 4`}
+                size="gallery"
+                aspectRatio="1/1"
+              />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <OptimizedImage
+                key={5}
+                src={cinq}
+                alt={`Gallery 5`}
+                size="gallery"
+                aspectRatio="1/1"
+              />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <OptimizedImage
+                key={6}
+                src={six}
+                alt={`Gallery 6`}
+                size="gallery"
+                aspectRatio="1/1"
+              />
           </div>
         </div>
       </section>

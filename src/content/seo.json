@@ -113,6 +113,22 @@
         "type": "article",
         "schemaType": "LocalBusiness"
       }
+    },
+    "legal": {
+      "fr": {
+        "title": "Mentions légales | Dilia",
+        "description": "Mentions légales du site Dilia. Informations sur l'éditeur, l'hébergement et la protection des données.",
+        "url": "/legal",
+        "image": "/og-dilia.jpg",
+        "type": "website"
+      },
+      "en": {
+        "title": "Legal Notice | Dilia",
+        "description": "Legal notice for the Dilia website. Information about the publisher, hosting and data protection.",
+        "url": "/legal",
+        "image": "/og-dilia.jpg",
+        "type": "website"
+      }
     }
   }
 }

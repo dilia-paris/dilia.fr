@@ -1,23 +1,23 @@
 {
   "hero": {
-    "title": "La Cave",
-    "subtitle": "Wine Bar"
+    "title": "Dilia la Cave",
+    "subtitle": "The taste of wine and sharing"
   },
   "sections": {
     "story": {
       "title": "The Story",
-      "subtitle": "The enoteca spirit",
-      "description": "La Cave was born from our passion for natural wines. In the spirit of Italian enoteche, we offer a selection of wines to enjoy on site, accompanied by small plates."
+      "subtitle": "Opened in 2021",
+      "description": "Opened in October 2021, Dilia la Cave extends the restaurant's spirit through a wine selection conceived as a journey between Italy and France. More than just a wine shop, it's a neighborhood enoteca, lively and convivial, dedicated to committed winemakers and wines with character.\n\nDilia la Cave is an invitation to share, to curiosity and to pleasure — that of good wine, told with passion."
     },
     "wines": {
       "title": "Wines",
       "subtitle": "Our selection",
-      "description": "Natural, biodynamic and rare wines. Mainly Italian, but also some French gems. Each bottle tells the story of a passionate winemaker."
+      "description": "The selection highlights organic, biodynamic and natural wines, mainly imported directly from Italian winemakers. You'll find rare and original references, sometimes unavailable elsewhere, that pair wonderfully with Dilia's cuisine. Whether you're building your personal cellar, looking for a meaningful gift, or sharing an exceptional wine with friends, each visit is a discovery."
     },
     "events": {
-      "title": "Events",
-      "subtitle": "Tastings & special evenings",
-      "description": "Regularly, we organize themed tastings, meetings with winemakers and special evenings."
+      "title": "Aperitif & Cicchetti",
+      "subtitle": "A moment to share",
+      "description": "La Cave is also a place for aperitifs. You can gather around wines by the glass, accompanied by cicchetti prepared at Dilietta, just next door, using house products, homemade focaccia and a selection of Italian charcuterie."
     },
     "photos": {
       "title": "Photos",
@@ -27,7 +27,7 @@
     "contact": {
       "title": "Contact",
       "subtitle": "Find us",
-      "address": "23 rue de la Fontaine au Roi, 75011 Paris",
+      "address": "30 Rue Etienne Dolet, 75020 Paris",
       "phone": "+33 1 43 55 54 06",
       "email": "lacave@dilia.fr",
       "hours": {

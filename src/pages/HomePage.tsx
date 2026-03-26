@@ -5,28 +5,31 @@ import SEOHead from '@/components/SEOHead';
 import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import caveImg from '@/assets/cave/1.JPG';
+import dilia from '@/assets/dilia/DILIA 2024 michele travail.jpg';
+import dilietta from '@/assets/dilieta/pizza fritta.JPG';
+import cave from '@/assets/cave/histoire.JPG';
+import distribution from '@/assets/cave/vin.JPG';
 
 const HomePage = () => {
   const { t } = useLanguage();
 
   const sections = [
-    { key: 'dilia', href: '/dilia', align: 'left' as const },
-    { key: 'dilietta', href: '/dilietta', align: 'right' as const },
-    { key: 'lacave', href: '/la-cave', align: 'left' as const },
-    { key: 'distribution', href: '/distribution', align: 'right' as const },
+    { key: 'dilia', href: '/dilia', align: 'left' as const, image: dilia },
+    { key: 'dilietta', href: '/dilietta', align: 'right' as const, image: dilietta },
+    { key: 'lacave', href: '/la-cave', align: 'left' as const, image: cave },
+    { key: 'distribution', href: '/distribution', align: 'right' as const, image: distribution },
   ];
 
   return (
     <Layout>
       <SEOHead page="home" />
       {/* Hero */}
-      <section className="py-24 md:py-32 lg:py-40 border-b border-border">
+      <section className="py-10 md:py-12 lg:py-16 border-b border-border">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide mb-3">
             {t('home', 'hero.title')}
           </h1>
-          <p className="text-lg md:text-xl tracking-wide opacity-70">
+          <p className="text-base md:text-lg tracking-wide opacity-70">
             {t('home', 'hero.subtitle')}
           </p>
         </div>
@@ -72,7 +75,7 @@ const HomePage = () => {
                 {/* Image */}
                 <div className={cn(!isLeft && "md:order-1")}>
                   <OptimizedImage
-                    src={caveImg}
+                    src={section.image}
                     alt={t('home', `sections.${section.key}.title`)}
                     size="content"
                     aspectRatio="4/3"

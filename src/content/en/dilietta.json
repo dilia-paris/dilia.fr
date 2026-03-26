@@ -1,18 +1,18 @@
 {
   "hero": {
     "title": "Dilietta",
-    "subtitle": "Grocery & Catering"
+    "subtitle": "Everyday cuisine by Michele Farnesi"
   },
   "sections": {
     "story": {
       "title": "The Story",
       "subtitle": "Born in 2024",
-      "description": "Dilietta is the natural extension of the Dilia universe. A place to find the Italian cuisine we love every day: simple, generous, made with exceptional products."
+      "description": "Opened in September 2024, Dilietta was born from a simple desire: to bring Michele Farnesi's cuisine to everyday life, in a more accessible, generous and spontaneous version. An address designed for the neighborhood, to visit often, at any time, without any special occasion.\n\nYou'll find the essence of Michele's cuisine through a wide selection of antipasti that evolve with the seasons, fresh pasta made on site, a beautiful selection of homemade sweets, and exceptional Italian charcuterie from Osvaldo. The menu is complemented by numerous Italian grocery products, sourced directly by the chef from producers.\n\nDilietta is lively, everyday and joyful Italian cuisine — the kind you love to come back to, again and again."
     },
     "menu": {
       "title": "The Menu",
       "subtitle": "Antipasti, pasta & dishes",
-      "description": "Every day, discover our morning-made antipasti, fresh pasta, daily specials and lunch formulas. Take away or enjoy on site."
+      "description": "Every day at lunchtime, Dilietta offers a lunch set menu with pizza fritta or stuffed focaccia, ideal for a quick and gourmet meal.\n\nAmong the house favorites: lasagna, maritozzi, homemade focaccia and cicchetti, which have become signatures."
     },
     "products": {
       "title": "Products",
@@ -27,13 +27,13 @@
     "catering": {
       "title": "Catering",
       "subtitle": "Events & receptions",
-      "description": "For your corporate events, weddings or private occasions, Dilietta offers a bespoke catering service, true to the spirit of Italian generosity."
+      "description": "Beyond the table, Dilietta also accompanies your events and moments of sharing through catering services: corporate meetings, weddings, private or professional events, always with the same demand for taste and generosity."
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Find us",
-      "address": "27 rue de la Fontaine au Roi, 75011 Paris",
-      "phone": "+33 1 43 55 54 05",
+      "address": "26 Rue Etienne Dolet, 75020 Paris",
+      "phone": "+33 1 73 75 10 49",
       "email": "dilietta@dilia.fr",
       "hours": {
         "title": "Hours",
