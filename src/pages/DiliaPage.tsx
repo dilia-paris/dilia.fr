@@ -137,6 +137,7 @@ const DiliaPage = () => {
           dinner: t('dilia', 'sections.contact.hours.dinner'),
           closed: t('dilia', 'sections.contact.hours.closed'),
         }}
+        className="py-16 md:py-24"
       />
     </Layout>
   );
