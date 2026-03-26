@@ -7,11 +7,11 @@ import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
 import SectionNav from '@/components/sections/SectionNav';
 import { useLanguage } from '@/contexts/LanguageContext';
-import histoire from '@/assets/dilieta/pizza fritta.JPG';
-import fournisseur from '@/assets/dilieta/fournisseur.JPG';
-import menu from '@/assets/dilieta/carte.JPG';
-import produit from '@/assets/dilieta/vitrine 5.JPG';
-import traiteur from '@/assets/dilieta/traiteur 1.JPG';
+import histoire from '@/assets/webp/dilieta/pizza-fritta.webp';
+import fournisseur from '@/assets/webp/dilieta/fournisseur.webp';
+import menu from '@/assets/webp/dilieta/carte.webp';
+import produit from '@/assets/webp/dilieta/vitrine-5.webp';
+import traiteur from '@/assets/webp/dilieta/traiteur-1.webp';
 
 const DiliettaPage = () => {
   const { t } = useLanguage();

@@ -1,8 +1,14 @@
 <!doctype html>
-<html lang="fr">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon and mobile icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/DILIA-logo-piccolo-nero1.gif" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/manifest.json" />
     
     <!-- Preconnect hints for performance -->
     <link rel="preconnect" href="https://dilia.fr" />
@@ -10,7 +16,17 @@
     <link rel="dns-prefetch" href="https://dilia.fr" />
     <link rel="dns-prefetch" href="https://www.facebook.com" />
     
-    <!-- Meta tags are dynamically populated by SEOHead component from seo.json -->
+    <!-- Default meta description (overridden by SEOHead component) -->
+    <meta name="description" content="Dilia - trois lieux, un même esprit. Restaurant italien gastronomique, épicerie fine, cave à vins et distribution." />
+    
+    <!-- Set lang attribute dynamically based on URL path -->
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        var lang = path.startsWith('/en') ? 'en' : 'fr';
+        document.documentElement.lang = lang;
+      }());
+    </script>
     
     <!-- Handle GitHub Pages SPA redirect -->
     <script>

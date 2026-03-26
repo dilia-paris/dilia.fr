@@ -56,6 +56,7 @@ const SEOHead = ({ page }: SEOHeadProps) => {
     setMeta('property', 'og:image:width', String(seoConfig.defaultImageWidth));
     setMeta('property', 'og:image:height', String(seoConfig.defaultImageHeight));
     setMeta('property', 'og:image:type', seoConfig.defaultImageType);
+    setMeta('property', 'og:image:alt', pageData.title);
     
     if (seoConfig.facebookPage) {
       setMeta('property', 'article:publisher', seoConfig.facebookPage);
@@ -110,18 +111,25 @@ const SEOHead = ({ page }: SEOHeadProps) => {
 
     // JSON-LD Schema
     const schemaType = (pageData as Record<string, unknown>).schemaType as string | undefined;
+    // Remove existing schemas
+    const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
+    existingSchemas.forEach(s => s.remove());
+    
     if (schemaType) {
-      // Remove existing schema
-      const existingSchema = document.querySelector('script[type="application/ld+json"]');
-      if (existingSchema) {
-        existingSchema.remove();
-      }
-
       const schema = generateSchema(page, pageData, schemaType, baseUrl, imageUrl, language);
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(schema);
       document.head.appendChild(script);
+    }
+    
+    // Add BreadcrumbList schema for all pages except home
+    if (page !== 'home') {
+      const breadcrumbSchema = generateBreadcrumbSchema(page, pageData, baseUrl, language);
+      const breadcrumbScript = document.createElement('script');
+      breadcrumbScript.type = 'application/ld+json';
+      breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+      document.head.appendChild(breadcrumbScript);
     }
 
     // Cleanup on unmount
@@ -199,20 +207,34 @@ function generateSchema(
   };
 
   // Add specific schema based on type
+  const address = {
+    "@type": "PostalAddress",
+    "streetAddress": org.address,
+    "addressLocality": "Paris",
+    "postalCode": "75011",
+    "addressCountry": "FR"
+  };
+
+  const geo = (pageData as Record<string, unknown>).geo as { latitude: number; longitude: number } | undefined;
+  
+  const baseLocalBusiness = {
+    "@id": `${baseUrl}${pageData.url}#business`,
+    "name": org.name,
+    "image": imageUrl,
+    "address": address,
+    "telephone": org.telephone,
+    "url": `${baseUrl}${pageData.url}`,
+    "geo": geo ? {
+      "@type": "GeoCoordinates",
+      "latitude": geo.latitude,
+      "longitude": geo.longitude
+    } : undefined
+  };
+
   if (schemaType === 'Restaurant') {
     (baseSchema["@graph"] as unknown[]).push({
       "@type": "Restaurant",
-      "@id": `${baseUrl}${pageData.url}#restaurant`,
-      "name": org.name,
-      "image": imageUrl,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": org.address,
-        "addressLocality": "Paris",
-        "postalCode": "75011",
-        "addressCountry": "FR"
-      },
-      "telephone": org.telephone,
+      ...baseLocalBusiness,
       "priceRange": pageData.priceRange,
       "servesCuisine": pageData.servesCuisine,
       "openingHoursSpecification": (pageData.openingHours as string[] || []).map(hours => ({
@@ -222,9 +244,70 @@ function generateSchema(
         "closes": hours.split(' ')[1]?.split('-')[1]
       }))
     });
+  } else if (schemaType === 'GroceryStore') {
+    (baseSchema["@graph"] as unknown[]).push({
+      "@type": "GroceryStore",
+      ...baseLocalBusiness,
+      "priceRange": pageData.priceRange,
+      "servesCuisine": pageData.servesCuisine
+    });
+  } else if (schemaType === 'WineBar') {
+    (baseSchema["@graph"] as unknown[]).push({
+      "@type": "WineBar",
+      ...baseLocalBusiness
+    });
+  } else if (schemaType === 'LocalBusiness') {
+    (baseSchema["@graph"] as unknown[]).push({
+      "@type": "LocalBusiness",
+      ...baseLocalBusiness
+    });
   }
 
   return baseSchema;
+}
+
+function generateBreadcrumbSchema(
+  page: PageKey,
+  pageData: Record<string, unknown>,
+  baseUrl: string,
+  language: string
+) {
+  const langPrefix = language === 'fr' ? '/fr' : '/en';
+  
+  // Define breadcrumb items based on page
+  const breadcrumbItems: { name: string; url: string }[] = [
+    {
+      name: language === 'fr' ? 'Accueil' : 'Home',
+      url: `${baseUrl}${langPrefix}/`
+    }
+  ];
+  
+  // Add page-specific breadcrumb
+  const pageLabels: Record<string, { fr: string; en: string }> = {
+    dilia: { fr: 'Dilia', en: 'Dilia' },
+    dilietta: { fr: 'Dilietta', en: 'Dilietta' },
+    lacave: { fr: 'La Cave', en: 'La Cave' },
+    distribution: { fr: 'Distribution', en: 'Distribution' },
+    legal: { fr: 'Mentions légales', en: 'Legal Notice' }
+  };
+  
+  if (page !== 'home' && pageLabels[page]) {
+    breadcrumbItems.push({
+      name: pageLabels[page][language],
+      url: `${baseUrl}${pageData.url}`
+    });
+  }
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  };
 }
 
 export default SEOHead;

@@ -5,10 +5,10 @@ import SEOHead from '@/components/SEOHead';
 import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import dilia from '@/assets/dilia/DILIA 2024 michele.jpg';
-import dilietta from '@/assets/dilieta/pizza fritta.JPG';
-import cave from '@/assets/cave/histoire.JPG';
-import distribution from '@/assets/cave/vin.JPG';
+import dilia from '@/assets/webp/dilia/DILIA-2024-michele.webp';
+import dilietta from '@/assets/webp/dilieta/pizza-fritta.webp';
+import cave from '@/assets/webp/cave/histoire.webp';
+import distribution from '@/assets/webp/cave/vin.webp';
 
 const HomePage = () => {
   const { t } = useLanguage();

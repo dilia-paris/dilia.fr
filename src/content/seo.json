@@ -6,7 +6,7 @@
   "defaultImage": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
   "defaultImageWidth": 1200,
   "defaultImageHeight": 900,
-  "defaultImageType": "image/jpeg",
+  "defaultImageType": "image/gif",
   "twitterHandle": "",
   "facebookPage": "https://www.facebook.com/dilia.paris",
   "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -14,14 +14,20 @@
     "name": "Dilia",
     "logo": "/logo.png",
     "address": "Paris",
-    "telephone": "+33 9 53 56 24 14"
+    "telephone": "+33 9 53 56 24 14",
+    "sameAs": [
+      "https://www.facebook.com/dilia.paris",
+      "https://www.instagram.com/dilia_restaurant/",
+      "https://www.instagram.com/dilietta_paris/",
+      "https://www.instagram.com/dilia_lacave/"
+    ]
   },
   "pages": {
     "home": {
       "fr": {
         "title": "Dilia | Trois Lieux, Un Même Esprit. - Michele Farnesi",
         "description": "Installé depuis plus de dix ans dans le quartier, Dilia est devenu une adresse incontournable, une maison où l'on revient, où l'on se sent chez soi. Un lieu à l'image de sa cuisine : sincère, chaleureuse et personnelle.",
-        "url": "/fr/",
+        "url": "/fr",
         "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "website",
         "modifiedTime": "2025-08-31T09:28:16+00:00"
@@ -29,7 +35,7 @@
       "en": {
         "title": "Dilia | Three Places, The Same Spirit. - Michele Farnesi",
         "description": "Installé depuis plus de dix ans dans le quartier, Dilia est devenu une adresse incontournable, une maison où l'on revient, où l'on se sent chez soi. Un lieu à l'image de sa cuisine : sincère, chaleureuse et personnelle.",
-        "url": "/en/",
+        "url": "/en",
         "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "website",
         "modifiedTime": "2025-08-31T09:28:16+00:00"
@@ -39,76 +45,104 @@
       "fr": {
         "title": "Dilia Restaurant — Cuisine italienne gastronomique | Paris 11",
         "description": "Restaurant Dilia, cuisine italienne raffinée par le Chef Michele Farnesi. Réservez votre table au cœur du 20e arrondissement de Paris.",
-        "url": "/dilia",
-        "image": "/og-dilia.jpg",
+        "url": "/fr/dilia",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
         "schemaType": "Restaurant",
         "priceRange": "€€€",
         "servesCuisine": "Italian",
-        "openingHours": ["Tu-Sa 12:00-14:30", "Tu-Sa 19:30-22:30"]
+        "openingHours": ["Tu-Sa 12:00-14:30", "Tu-Sa 19:30-22:30"],
+        "geo": {
+          "latitude": 48.86866700532306,
+          "longitude": 2.3862312686639164
+        }
       },
       "en": {
         "title": "Dilia Restaurant — Fine Italian Cuisine | Paris 11",
         "description": "Dilia Restaurant, refined Italian cuisine by Chef Michele Farnesi. Book your table in the heart of Paris' 20th arrondissement.",
-        "url": "/dilia",
-        "image": "/og-dilia.jpg",
+        "url": "/en/dilia",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
         "schemaType": "Restaurant",
         "priceRange": "€€€",
         "servesCuisine": "Italian",
-        "openingHours": ["Tu-Sa 12:00-14:30", "Tu-Sa 19:30-22:30"]
+        "openingHours": ["Tu-Sa 12:00-14:30", "Tu-Sa 19:30-22:30"],
+        "geo": {
+          "latitude": 48.86866700532306,
+          "longitude": 2.3862312686639164
+        }
       }
     },
     "dilietta": {
       "fr": {
         "title": "Dilietta — Épicerie italienne & Traiteur | Paris 11",
         "description": "Dilietta, épicerie fine italienne et service traiteur. Produits artisanaux, antipasti, pâtes fraîches et cuisine à emporter au quotidien.",
-        "url": "/dilietta",
-        "image": "/og-dilietta.jpg",
+        "url": "/fr/dilietta",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
-        "schemaType": "Store"
+        "schemaType": "GroceryStore",
+        "servesCuisine": "Italian",
+        "priceRange": "€",
+        "geo": {
+          "latitude": 48.86785705324149,
+          "longitude": 2.384776325167319
+        }
       },
       "en": {
         "title": "Dilietta — Italian Grocery & Catering | Paris 11",
         "description": "Dilietta, Italian fine grocery and catering service. Artisanal products, antipasti, fresh pasta and daily takeaway cuisine.",
-        "url": "/dilietta",
-        "image": "/og-dilietta.jpg",
+        "url": "/en/dilietta",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
-        "schemaType": "Store"
+        "schemaType": "GroceryStore",
+        "servesCuisine": "Italian",
+        "priceRange": "€",
+        "geo": {
+          "latitude": 48.86785705324149,
+          "longitude": 2.384776325167319
+        }
       }
     },
     "lacave": {
       "fr": {
         "title": "La Cave — Bar à vins naturels & Enoteca | Paris 11",
         "description": "La Cave, bar à vins et enoteca. Sélection de vins naturels, biodynamiques et rares. Dégustations et soirées au cœur de Paris.",
-        "url": "/la-cave",
-        "image": "/og-lacave.jpg",
+        "url": "/fr/la-cave",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
-        "schemaType": "BarOrPub"
+        "schemaType": "WineBar",
+        "geo": {
+          "latitude": 48.867944157844434,
+          "longitude": 2.385135178750662
+        }
       },
       "en": {
         "title": "La Cave — Natural Wine Bar & Enoteca | Paris 11",
         "description": "La Cave, wine bar and enoteca. Selection of natural, biodynamic and rare wines. Tastings and events in the heart of Paris.",
-        "url": "/la-cave",
-        "image": "/og-lacave.jpg",
+        "url": "/en/la-cave",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
-        "schemaType": "BarOrPub"
+        "schemaType": "WineBar",
+        "geo": {
+          "latitude": 48.867944157844434,
+          "longitude": 2.385135178750662
+        }
       }
     },
     "distribution": {
       "fr": {
         "title": "Distribution — Import & distribution de vins italiens | Dilia",
         "description": "Service de distribution B2B de vins italiens. Import direct de producteurs sélectionnés pour les professionnels de la restauration.",
-        "url": "/distribution",
-        "image": "/og-distribution.jpg",
+        "url": "/fr/distribution",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
         "schemaType": "LocalBusiness"
       },
       "en": {
         "title": "Distribution — Italian Wine Import & Distribution | Dilia",
         "description": "B2B Italian wine distribution service. Direct import from selected producers for hospitality professionals.",
-        "url": "/distribution",
-        "image": "/og-distribution.jpg",
+        "url": "/en/distribution",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "article",
         "schemaType": "LocalBusiness"
       }
@@ -117,15 +151,15 @@
       "fr": {
         "title": "Mentions légales | Dilia",
         "description": "Mentions légales du site Dilia. Informations sur l'éditeur, l'hébergement et la protection des données.",
-        "url": "/legal",
-        "image": "/og-dilia.jpg",
+        "url": "/fr/legal",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "website"
       },
       "en": {
         "title": "Legal Notice | Dilia",
         "description": "Legal notice for the Dilia website. Information about the publisher, hosting and data protection.",
-        "url": "/legal",
-        "image": "/og-dilia.jpg",
+        "url": "/en/legal",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
         "type": "website"
       }
     }

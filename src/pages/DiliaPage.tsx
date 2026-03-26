@@ -7,9 +7,9 @@ import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
 import SectionNav from '@/components/sections/SectionNav';
 import { useLanguage } from '@/contexts/LanguageContext';
-import michele from '@/assets/dilia/DILIA 2024 michele travail.jpg';
-import menu from '@/assets/dilia/1000 feuille truffe.JPG';
-import vin from '@/assets/dilia/DILIA 2024 bar.jpg';
+import michele from '@/assets/webp/dilia/DILIA-2024-michele-travail.webp';
+import menu from '@/assets/webp/dilia/1000-feuille-truffe.webp';
+import vin from '@/assets/webp/dilia/DILIA-2024-bar.webp';
 
 const DiliaPage = () => {
   const { t } = useLanguage();

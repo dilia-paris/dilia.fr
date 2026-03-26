@@ -1,0 +1,23 @@
+{
+  "name": "Dilia | trois lieux, un même esprit",
+  "short_name": "Dilia",
+  "description": "Restaurant italien gastronomique, épicerie fine, cave à vins et distribution de vins italiens à Paris",
+  "start_url": "/fr",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/DILIA-logo-piccolo-nero1.gif",
+      "sizes": "any",
+      "type": "image/gif",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["food", "restaurant", "wine"],
+  "scope": "/",
+  "prefer_related_applications": false
+}
