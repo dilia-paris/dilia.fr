@@ -5,7 +5,7 @@ import SEOHead from '@/components/SEOHead';
 import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
-import dilia from '@/assets/dilia/DILIA 2024 michele travail.jpg';
+import dilia from '@/assets/dilia/DILIA 2024 michele.jpg';
 import dilietta from '@/assets/dilieta/pizza fritta.JPG';
 import cave from '@/assets/cave/histoire.JPG';
 import distribution from '@/assets/cave/vin.JPG';

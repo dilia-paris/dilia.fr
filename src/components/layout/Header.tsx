@@ -17,11 +17,11 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: t('common', 'nav.dilia'), href: '/dilia' },
-    { label: t('common', 'nav.dilietta'), href: '/dilietta' },
-    { label: t('common', 'nav.lacave'), href: '/la-cave' },
-    { label: t('common', 'nav.distribution'), href: '/distribution' },
-    { label: t('common', 'nav.reservation'), href: '/dilia#reservation' },
+    { label: t('common', 'nav.dilia'), href: `/${language}/dilia` },
+    { label: t('common', 'nav.dilietta'), href: `/${language}/dilietta` },
+    { label: t('common', 'nav.lacave'), href: `/${language}/la-cave` },
+    { label: t('common', 'nav.distribution'), href: `/${language}/distribution` },
+    { label: t('common', 'nav.reservation'), href: `/${language}/dilia#reservation` },
   ];
 
   const languages: { code: Language; label: string }[] = [
@@ -42,7 +42,7 @@ const Header = () => {
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link 
-            to="/" 
+            to={`/${language}`} 
             className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase hover:opacity-70 transition-opacity"
           >
             Dilia

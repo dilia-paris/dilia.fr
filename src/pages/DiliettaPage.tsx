@@ -54,6 +54,9 @@ const DiliettaPage = () => {
         description={t('dilietta', 'sections.story.description')}
         imageSrc={histoire}
         imageAlt="Dilietta"
+        socialLinks={[
+          { platform: 'instagram', url: 'https://www.instagram.com/dilietta_paris/', label: 'Instagram' },
+        ]}
       />
 
       <div className="bg-muted">

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import SEOHead from '@/components/SEOHead';
@@ -16,6 +16,34 @@ import rugoli from '@/assets/cave/bouteilles cave 3.JPG';
 const DistributionPage = () => {
   const { t } = useLanguage();
   const location = useLocation();
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const subject = encodeURIComponent(`Demande de contact - ${formData.company || formData.name}`);
+    const body = encodeURIComponent(
+      `Nom: ${formData.name}\n` +
+      `Entreprise: ${formData.company}\n` +
+      `Email: ${formData.email}\n` +
+      `Téléphone: ${formData.phone}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:distribution@dilia.fr?subject=${subject}&body=${body}`;
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -101,14 +129,17 @@ const DistributionPage = () => {
               </h2>
             </div>
 
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="text-sm tracking-wide opacity-70 mb-2 block">
                     {t('distribution', 'sections.contact.form.name')}
                   </label>
                   <Input 
-                    type="text" 
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="bg-transparent border-foreground/20 focus:border-foreground"
                   />
                 </div>
@@ -117,7 +148,10 @@ const DistributionPage = () => {
                     {t('distribution', 'sections.contact.form.company')}
                   </label>
                   <Input 
-                    type="text" 
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
                     className="bg-transparent border-foreground/20 focus:border-foreground"
                   />
                 </div>
@@ -129,7 +163,10 @@ const DistributionPage = () => {
                     {t('distribution', 'sections.contact.form.email')}
                   </label>
                   <Input 
-                    type="email" 
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="bg-transparent border-foreground/20 focus:border-foreground"
                   />
                 </div>
@@ -138,7 +175,10 @@ const DistributionPage = () => {
                     {t('distribution', 'sections.contact.form.phone')}
                   </label>
                   <Input 
-                    type="tel" 
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     className="bg-transparent border-foreground/20 focus:border-foreground"
                   />
                 </div>
@@ -150,6 +190,9 @@ const DistributionPage = () => {
                 </label>
                 <Textarea 
                   rows={5}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   className="bg-transparent border-foreground/20 focus:border-foreground resize-none"
                 />
               </div>

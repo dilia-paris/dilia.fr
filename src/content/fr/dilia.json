@@ -23,19 +23,19 @@
     "reservation": {
       "title": "Réservation",
       "subtitle": "Réservez votre table",
-      "description": "Pour réserver une table chez Dilia, utilisez notre système de réservation en ligne ou contactez-nous directement."
+      "description": "Nous sommes ouverts du jeudi au dimanche midi et soir, lundi uniquement le soir\n\nde 12:30 à 14:00 et de 19:30 à 22:30\n\nNous sommes disponibles les jours d'ouverture au +33(0)953562414\n\nNous n'acceptons ni les chèques ni les cartes American Express.\n\nMerci et à très bientôt !"
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Nous trouver",
       "address": "1 Rue d'Eupatoria, 75020 Paris",
-      "phone": "+33 1 43 55 54 04",
+      "phone": "+33 9 53 56 24 14",
       "email": "contact@dilia.fr",
       "hours": {
         "title": "Horaires",
-        "lunch": "Déjeuner : 12h - 14h30",
-        "dinner": "Dîner : 19h - 22h30",
-        "closed": "Fermé le dimanche"
+        "lunch": "Déjeuner du jeudi au dimanche : 12h30 - 14h00",
+        "dinner": "Dîner du jeudi au lundi: 19h30 - 22h30",
+        "closed": "Fermé les mardi et mercredi"
       }
     }
   }

@@ -29,13 +29,13 @@
       "title": "Contact",
       "subtitle": "Find us",
       "address": "1 Rue d'Eupatoria, 75020 Paris",
-      "phone": "+33 1 43 55 54 04",
+      "phone": "+33 9 53 56 24 14",
       "email": "contact@dilia.fr",
       "hours": {
         "title": "Hours",
-        "lunch": "Lunch: 12pm - 2:30pm",
-        "dinner": "Dinner: 7pm - 10:30pm",
-        "closed": "Closed on Sunday"
+        "lunch": "Lunch from Thursday to Sunday: 12:30pm - 2pm",
+        "dinner": "Dinner from Thursday to Monday: 7:30pm - 10:30pm",
+        "closed": "Closed on Tuesday and Wednesday"
       }
     }
   }

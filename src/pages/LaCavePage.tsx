@@ -58,6 +58,9 @@ const LaCavePage = () => {
         description={t('lacave', 'sections.story.description')}
         imageSrc={histoire}
         imageAlt="La Cave"
+        socialLinks={[
+          { platform: 'instagram', url: 'https://www.instagram.com/dilia_lacave/', label: 'Instagram' },
+        ]}
       />
 
       <div className="bg-muted">
@@ -105,9 +108,6 @@ const LaCavePage = () => {
                 size="gallery"
                 aspectRatio="1/1"
               />
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <OptimizedImage
                 key={2}
                 src={deux}
@@ -115,9 +115,6 @@ const LaCavePage = () => {
                 size="gallery"
                 aspectRatio="1/1"
               />
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <OptimizedImage
                 key={3}
                 src={trois}
@@ -125,9 +122,6 @@ const LaCavePage = () => {
                 size="gallery"
                 aspectRatio="1/1"
               />
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <OptimizedImage
                 key={4}
                 src={quatre}
@@ -135,9 +129,6 @@ const LaCavePage = () => {
                 size="gallery"
                 aspectRatio="1/1"
               />
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <OptimizedImage
                 key={5}
                 src={cinq}
@@ -145,9 +136,6 @@ const LaCavePage = () => {
                 size="gallery"
                 aspectRatio="1/1"
               />
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <OptimizedImage
                 key={6}
                 src={six}
@@ -171,6 +159,7 @@ const LaCavePage = () => {
           weekdays: t('lacave', 'sections.contact.hours.weekdays'),
           closed: t('lacave', 'sections.contact.hours.closed'),
         }}
+        className="py-16 md:py-24"
       />
     </Layout>
   );

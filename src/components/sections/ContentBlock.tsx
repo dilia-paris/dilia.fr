@@ -1,6 +1,13 @@
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import OptimizedImage from '@/components/OptimizedImage';
+import { Instagram, Facebook } from 'lucide-react';
+
+interface SocialLink {
+  platform: 'instagram' | 'facebook';
+  url: string;
+  label?: string;
+}
 
 interface ContentBlockProps {
   align?: 'left' | 'right';
@@ -13,6 +20,7 @@ interface ContentBlockProps {
   showPlaceholder?: boolean;
   imageSrc?: string;
   imageAlt?: string;
+  socialLinks?: SocialLink[];
 }
 
 const ContentBlock = ({
@@ -26,6 +34,7 @@ const ContentBlock = ({
   showPlaceholder = true,
   imageSrc,
   imageAlt = 'Photo',
+  socialLinks,
 }: ContentBlockProps) => {
   const isLeft = align === 'left';
 
@@ -49,19 +58,39 @@ const ContentBlock = ({
               {title}
             </h2>
             <p className="text-base md:text-lg leading-relaxed opacity-80 whitespace-pre-line">
-              {description}
+              {description.replace(/\\n/g, '\n')}
             </p>
             {tagline && (
               <p className="text-sm italic tracking-wide opacity-60">
                 {tagline}
               </p>
             )}
+            {socialLinks && socialLinks.length > 0 && (
+              <div className="flex flex-wrap gap-4 pt-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.platform}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 px-4 py-2 border border-foreground/20 rounded-full text-sm hover:bg-foreground/5 transition-colors"
+                  >
+                    {link.platform === 'instagram' ? (
+                      <Instagram className="h-4 w-4" />
+                    ) : (
+                      <Facebook className="h-4 w-4" />
+                    )}
+                    <span>{link.label || 'Follow us'}</span>
+                  </a>
+                ))}
+              </div>
+            )}
             {children}
           </div>
 
           {/* Image */}
           {showPlaceholder && (
-            <div className={cn(!isLeft && "md:order-1")}>
+            <div className={cn("max-w-md mx-auto", !isLeft && "md:order-1")}>
               <OptimizedImage
                 src={imageSrc || ''}
                 alt={imageAlt}

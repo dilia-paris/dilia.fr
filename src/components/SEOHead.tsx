@@ -39,6 +39,11 @@ const SEOHead = ({ page }: SEOHeadProps) => {
 
     // Basic meta tags
     setMeta('name', 'description', pageData.description);
+    
+    // Robots meta tag
+    if (seoConfig.robots) {
+      setMeta('name', 'robots', seoConfig.robots);
+    }
 
     // Open Graph tags
     setMeta('property', 'og:locale', language === 'fr' ? 'fr_FR' : 'en_US');
@@ -54,6 +59,12 @@ const SEOHead = ({ page }: SEOHeadProps) => {
     
     if (seoConfig.facebookPage) {
       setMeta('property', 'article:publisher', seoConfig.facebookPage);
+    }
+    
+    // Article modified time
+    const modifiedTime = (pageData as Record<string, unknown>).modifiedTime as string | undefined;
+    if (modifiedTime) {
+      setMeta('property', 'article:modified_time', modifiedTime);
     }
 
     // Twitter Card tags
@@ -73,6 +84,29 @@ const SEOHead = ({ page }: SEOHeadProps) => {
       document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', fullUrl);
+
+    // Hreflang tags for multilingual support
+    const setHreflang = (lang: string, href: string) => {
+      let element = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
+      if (!element) {
+        element = document.createElement('link');
+        element.setAttribute('rel', 'alternate');
+        element.setAttribute('hreflang', lang);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('href', href);
+    };
+    
+    // Set hreflang for current page in both languages
+    // Extract the path without language prefix to build alternate URLs
+    const currentPath = location.pathname;
+    const pathWithoutLang = currentPath.replace(/^\/(fr|en)/, '');
+    const frPath = `/fr${pathWithoutLang}`;
+    const enPath = `/en${pathWithoutLang}`;
+    
+    setHreflang('fr', `${baseUrl}${frPath}`);
+    setHreflang('en', `${baseUrl}${enPath}`);
+    setHreflang('x-default', `${baseUrl}${frPath}`);
 
     // JSON-LD Schema
     const schemaType = (pageData as Record<string, unknown>).schemaType as string | undefined;

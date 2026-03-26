@@ -42,7 +42,7 @@ const OptimizedImage = ({
           'bg-muted border border-border flex items-center justify-center',
           className
         )}
-        style={{ aspectRatio: aspectRatio ?? `${config.width}/${config.height}` }}
+        style={aspectRatio === 'auto' ? {} : { aspectRatio: aspectRatio ?? `${config.width}/${config.height}` }}
       >
         <span className="text-sm tracking-widest uppercase opacity-30">
           {placeholderText}
@@ -54,7 +54,7 @@ const OptimizedImage = ({
   return (
     <div
       className={cn('relative overflow-hidden bg-muted', className)}
-      style={{ aspectRatio: aspectRatio ?? `${config.width}/${config.height}` }}
+      style={aspectRatio === 'auto' ? {} : { aspectRatio: aspectRatio ?? `${config.width}/${config.height}` }}
     >
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-muted" />

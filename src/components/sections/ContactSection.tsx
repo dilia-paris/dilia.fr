@@ -1,8 +1,14 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
 
 interface Hours {
   title: string;
   [key: string]: string;
+}
+
+interface SocialLink {
+  platform: 'instagram' | 'facebook';
+  url: string;
+  label?: string;
 }
 
 interface ContactSectionProps {
@@ -13,6 +19,8 @@ interface ContactSectionProps {
   phone: string;
   email: string;
   hours: Hours;
+  socialLinks?: SocialLink[];
+  className?: string;
 }
 
 const ContactSection = ({
@@ -23,11 +31,13 @@ const ContactSection = ({
   phone,
   email,
   hours,
+  socialLinks,
+  className = "py-16 md:py-24 bg-muted",
 }: ContactSectionProps) => {
   const hourEntries = Object.entries(hours).filter(([key]) => key !== 'title');
 
   return (
-    <section id={id} className="py-16 md:py-24 bg-muted">
+    <section id={id} className={className}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -75,6 +85,30 @@ const ContactSection = ({
               </div>
             </div>
           </div>
+
+          {/* Social Media Links */}
+          {socialLinks && socialLinks.length > 0 && (
+            <div className="mt-8 pt-8 border-t border-border">
+              <div className="flex flex-wrap justify-center gap-6">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.platform}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity"
+                  >
+                    {link.platform === 'instagram' ? (
+                      <Instagram className="h-5 w-5" />
+                    ) : (
+                      <Facebook className="h-5 w-5" />
+                    )}
+                    <span>{link.label || link.platform.charAt(0).toUpperCase() + link.platform.slice(1)}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Map */}
           <div className="mt-12 aspect-[16/9] md:aspect-[21/9] border border-border overflow-hidden">

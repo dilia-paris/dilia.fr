@@ -62,6 +62,9 @@ const DiliaPage = () => {
         description={t('dilia', 'sections.chef.description')}
         imageSrc={michele}
         imageAlt="Chef"
+        socialLinks={[
+          { platform: 'instagram', url: 'https://www.instagram.com/dilia_restaurant/', label: 'Instagram' },
+        ]}
       >
         <blockquote className="border-l-2 border-foreground/20 pl-4 italic opacity-70">
           "{t('dilia', 'sections.chef.quote')}"
@@ -100,8 +103,8 @@ const DiliaPage = () => {
             <h2 className="text-3xl md:text-4xl font-light tracking-wide mt-2 mb-6">
               {t('dilia', 'sections.reservation.title')}
             </h2>
-            <p className="text-base md:text-lg leading-relaxed opacity-80 mb-8">
-              {t('dilia', 'sections.reservation.description')}
+            <p className="text-base md:text-lg leading-relaxed opacity-80 mb-8 whitespace-pre-line">
+              {t('dilia', 'sections.reservation.description').replace(/\\n/g, '\n')}
             </p>
             
             {/* Zenchef Reservation Widget */}

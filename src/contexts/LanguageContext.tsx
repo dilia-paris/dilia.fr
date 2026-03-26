@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Import all content files
 import bannerContent from '@/content/banner.json';
@@ -45,8 +46,57 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const getLanguageFromPath = (pathname: string): Language => {
+  if (pathname.startsWith('/en')) return 'en';
+  return 'fr';
+};
+
+const getStoredLanguage = (): Language | null => {
+  try {
+    const stored = localStorage.getItem('dilia-language');
+    if (stored === 'fr' || stored === 'en') return stored;
+  } catch (e) {
+    // localStorage not available
+  }
+  return null;
+};
+
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('fr');
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  // Initialize language from URL or localStorage
+  const [language, setLanguageState] = useState<Language>(() => {
+    const urlLang = getLanguageFromPath(location.pathname);
+    const storedLang = getStoredLanguage();
+    return urlLang || storedLang || 'fr';
+  });
+
+  // Sync language with URL changes
+  useEffect(() => {
+    const urlLang = getLanguageFromPath(location.pathname);
+    if (urlLang !== language) {
+      setLanguageState(urlLang);
+    }
+  }, [location.pathname, language]);
+
+  // Wrapper for setLanguage that also updates URL and localStorage
+  const setLanguage = useCallback((newLang: Language) => {
+    setLanguageState(newLang);
+    
+    // Persist to localStorage
+    try {
+      localStorage.setItem('dilia-language', newLang);
+    } catch (e) {
+      // localStorage not available
+    }
+    
+    // Update URL to reflect new language
+    const currentPath = location.pathname;
+    const pathWithoutLang = currentPath.replace(/^\/(fr|en)/, '');
+    const newPath = `/${newLang}${pathWithoutLang}`;
+    navigate(newPath, { replace: true });
+  }, [location.pathname, navigate]);
 
   const t = useCallback((page: keyof typeof content.fr, path: string): string => {
     const pageContent = content[language][page];

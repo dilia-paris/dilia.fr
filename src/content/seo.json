@@ -1,45 +1,44 @@
 {
   "siteName": {
-    "fr": "Dilia | L'univers culinaire",
-    "en": "Dilia | Culinary Universe"
+    "fr": "Dilia | trois lieux, un même esprit.",
+    "en": "Dilia | three places, the same spirit."
   },
-  "defaultImage": "/og-image.jpg",
+  "defaultImage": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
   "defaultImageWidth": 1200,
-  "defaultImageHeight": 630,
+  "defaultImageHeight": 900,
   "defaultImageType": "image/jpeg",
-  "twitterHandle": "@dilia_paris",
+  "twitterHandle": "",
   "facebookPage": "https://www.facebook.com/dilia.paris",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   "organization": {
     "name": "Dilia",
     "logo": "/logo.png",
-    "address": "25 rue de la Fontaine au Roi, 75011 Paris",
-    "telephone": "+33 1 43 55 54 04",
-    "sameAs": [
-      "https://www.facebook.com/dilia.paris",
-      "https://www.instagram.com/dilia.paris"
-    ]
+    "address": "Paris",
+    "telephone": "+33 9 53 56 24 14"
   },
   "pages": {
     "home": {
       "fr": {
-        "title": "Dilia — L'univers culinaire italien à Paris 11",
-        "description": "Découvrez l'univers Dilia : restaurant gastronomique, épicerie fine, cave à vins et distribution. Une expérience culinaire italienne authentique au cœur de Paris.",
-        "url": "/",
-        "image": "/og-home.jpg",
-        "type": "website"
+        "title": "Dilia | Trois Lieux, Un Même Esprit. - Michele Farnesi",
+        "description": "Installé depuis plus de dix ans dans le quartier, Dilia est devenu une adresse incontournable, une maison où l'on revient, où l'on se sent chez soi. Un lieu à l'image de sa cuisine : sincère, chaleureuse et personnelle.",
+        "url": "/fr/",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
+        "type": "website",
+        "modifiedTime": "2025-08-31T09:28:16+00:00"
       },
       "en": {
-        "title": "Dilia — Italian Culinary Universe in Paris 11",
-        "description": "Discover the Dilia universe: fine dining restaurant, gourmet grocery, wine bar and distribution. An authentic Italian culinary experience in the heart of Paris.",
-        "url": "/",
-        "image": "/og-home.jpg",
-        "type": "website"
+        "title": "Dilia | Three Places, The Same Spirit. - Michele Farnesi",
+        "description": "Installé depuis plus de dix ans dans le quartier, Dilia est devenu une adresse incontournable, une maison où l'on revient, où l'on se sent chez soi. Un lieu à l'image de sa cuisine : sincère, chaleureuse et personnelle.",
+        "url": "/en/",
+        "image": "https://dilia.fr/DILIA-logo-piccolo-nero1.gif",
+        "type": "website",
+        "modifiedTime": "2025-08-31T09:28:16+00:00"
       }
     },
     "dilia": {
       "fr": {
         "title": "Dilia Restaurant — Cuisine italienne gastronomique | Paris 11",
-        "description": "Restaurant Dilia, cuisine italienne raffinée par le Chef Michele Farnesi. Réservez votre table au cœur du 11e arrondissement de Paris.",
+        "description": "Restaurant Dilia, cuisine italienne raffinée par le Chef Michele Farnesi. Réservez votre table au cœur du 20e arrondissement de Paris.",
         "url": "/dilia",
         "image": "/og-dilia.jpg",
         "type": "article",
@@ -50,7 +49,7 @@
       },
       "en": {
         "title": "Dilia Restaurant — Fine Italian Cuisine | Paris 11",
-        "description": "Dilia Restaurant, refined Italian cuisine by Chef Michele Farnesi. Book your table in the heart of Paris' 11th arrondissement.",
+        "description": "Dilia Restaurant, refined Italian cuisine by Chef Michele Farnesi. Book your table in the heart of Paris' 20th arrondissement.",
         "url": "/dilia",
         "image": "/og-dilia.jpg",
         "type": "article",
