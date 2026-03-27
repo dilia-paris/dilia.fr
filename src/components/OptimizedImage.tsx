@@ -33,7 +33,7 @@ function generateSrcSet(src: string): string | undefined {
 
   const basePath = src.replace('.webp', '');
   // Only include variants that actually exist (400px variants)
-  const widths = [400];
+  const widths = [400, 800, 1200, 1600];
   
   const srcSetParts = widths.map(width => `${basePath}-${width}.webp ${width}w`);
   

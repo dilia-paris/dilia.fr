@@ -59,9 +59,11 @@ const ContentBlock = ({
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
               {title}
             </h2>
-            <p className="text-base md:text-lg leading-relaxed opacity-80 whitespace-pre-line">
-              {description.replace(/\\n/g, '\n')}
-            </p>
+            {description.includes('<') ? (
+  <div className="text-base md:text-lg leading-relaxed opacity-80 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: description.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"').replace(/&#039;/g, "'") }} />
+) : (
+  <p className="text-base md:text-lg leading-relaxed opacity-80 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: description }} />
+)}
             {tagline && (
               <p className="text-sm italic tracking-wide opacity-60">
                 {tagline}

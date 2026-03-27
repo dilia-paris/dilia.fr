@@ -54,7 +54,7 @@ const HomePage = () => {
                   <span className="text-sm tracking-widest uppercase opacity-60">
                     {t('home', `sections.${section.key}.subtitle`)}
                   </span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide" style={{ fontFamily: "'Snell Roundhand', cursive" }}>
                     {t('home', `sections.${section.key}.title`)}
                   </h2>
                   <p className="text-base md:text-lg leading-relaxed opacity-80">

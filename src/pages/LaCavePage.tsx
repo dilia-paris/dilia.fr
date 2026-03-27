@@ -8,15 +8,15 @@ import ContactSection from '@/components/sections/ContactSection';
 import SectionNav from '@/components/sections/SectionNav';
 import OptimizedImage from '@/components/OptimizedImage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import histoire from '@/assets/webp/cave/histoire.webp';
-import vin from '@/assets/webp/cave/vin.webp';
-import evenement from '@/assets/webp/cave/evenement.webp';
-import un from '@/assets/webp/cave/1.webp';
-import deux from '@/assets/webp/cave/2.webp';
-import trois from '@/assets/webp/cave/3.webp';
-import quatre from '@/assets/webp/cave/4.webp';
-import cinq from '@/assets/webp/cave/5.webp';
-import six from '@/assets/webp/cave/6.webp';
+import histoire from '@/assets/webp/cave/histoire-400.webp';
+import vin from '@/assets/webp/cave/vin-400.webp';
+import evenement from '@/assets/webp/cave/evenement-400.webp';
+import un from '@/assets/webp/cave/1-400.webp';
+import deux from '@/assets/webp/cave/2-400.webp';
+import trois from '@/assets/webp/cave/3-400.webp';
+import quatre from '@/assets/webp/cave/4-400.webp';
+import cinq from '@/assets/webp/cave/5-400.webp';
+import six from '@/assets/webp/cave/6-400.webp';
 
 const LaCavePage = () => {
   const { t } = useLanguage();

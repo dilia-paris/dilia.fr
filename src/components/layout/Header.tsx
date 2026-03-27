@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
+import OptimizedImage from '@/components/OptimizedImage';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,11 +42,14 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link 
-            to={`/${language}`} 
-            className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase hover:opacity-70 transition-opacity"
-          >
-            Dilia
+          <Link to={`/${language}`} className="hover:opacity-70 transition-opacity">
+            <OptimizedImage
+              src="/d_logo.png"
+              alt="Dilia logo"
+              size="content"
+              aspectRatio="1/1"
+              className="h-8 w-8 md:h-10 md:w-10"
+            />
           </Link>
 
           {/* Desktop Navigation */}

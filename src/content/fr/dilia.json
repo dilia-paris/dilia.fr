@@ -5,20 +5,20 @@
   },
   "sections": {
     "chef": {
-      "title": "Le Chef",
+      "title": "Historique",
       "subtitle": "Michele Farnesi",
-      "description": "Installé depuis plus de dix ans dans le quartier, Dilia est devenu une adresse incontournable, une maison où l'on revient, où l'on se sent chez soi. Un lieu à l'image de sa cuisine : sincère, chaleureuse et personnelle.\n\nAux commandes, le chef Michele Farnesi signe une cuisine inspirée de ses origines toscanes. Une cuisine franche, précise dans les saveurs et les cuissons, sans artifices. Le nom Dilia est un hommage à ses grands-parents, et plus particulièrement à ses deux grands-mères, grandes cuisinières du quotidien : Ilia, experte des bouillons, a transmis à Michele ses secrets pour des bouillons parfaitement équilibrés et Immola, dont la spécialité était le lapin in umido, incarne cette Toscane généreuse et terrienne qui nourrit encore aujourd'hui l'esprit de la carte.\n\nLe parcours de Michele est fait de rencontres et de voyages. Il débute à Alba, où le chef Fulvio le prend sous son aile, avant de poursuivre à Stockholm et Modène. À Paris, il rejoint les cuisines de Giovanni Passerini chez Rino, prend son premier poste de chef chez Heimat, mais très vite rêve d'indépendance.\n\nIl est tombé amoureux de cet endroit dès la première fois qu'il l'a vu, c'est donc naturellement que lorsque Michele a décidé de s'installer, il est allé voir son ami Simone Tondo, alors aux commandes de Roseval, et lui a proposé de reprendre le restaurant. Quelques mois plus tard, Dilia était lancé.",
+      "description": " Dilia est né en 2015, de l’envie du chef et propriétaire Michele Farnesi de créer un lieu vraiment libre.\n\nLibre de proposer sa cuisine, bien sûr, mais aussi de montrer qu’on peut faire de la gastronomie de qualité sans grands budgets ni chichi.\nLibre de prouver qu’une cuisine gastronomique peut être accessible dans le prix, mais aussi dans l’atmosphère : sincère, conviviale et sans prétention.\n\nChez Dilia, les plats sont savoureux, francs et surprenants, pensés pour éveiller vos papilles sans artifices inutiles.\nPour nous, l’élégance n’est pas dans la démonstration, mais dans le respect du produit, l’attention au client et le plaisir du moment partagé. C’est ça notre savoir-faire.\n\nDilia est né de cette envie : sortir des codes du restaurant gastronomique classique et offrir une alternative crédible, contemporaine et vivante.\n\nChaque jour, nous partageons cette vision avec tous ceux qui franchissent notre porte et s’installent à notre table.",
       "quote": "La cuisine, c'est l'amour que l'on met dans chaque assiette."
     },
     "menu": {
-      "title": "La Carte",
+      "title": "Lieu et ambiance",
       "subtitle": "Cuisine de saison",
-      "description": "Notre carte évolue au fil des saisons, mettant en valeur les meilleurs produits italiens. Des antipasti aux desserts, chaque plat raconte une histoire de tradition et de passion."
+      "description": "Dilia se niche sur une petite place charmante de Ménilmontant, animée par les habitants mais étonnamment tranquille, à l’abri du trafic.\nEn été, notre terrasse donne l’impression de dîner dans un petit village à la campagne : calme, convivial, et parfait pour profiter du soleil et de l’ambiance du quartier.\n\nÀ l’intérieur, le restaurant est petit et intimiste, avec une atmosphère chaleureuse qui rappelle une maison de campagne. Les briques et pierres apparentes, les poutres à nu et le décor épuré créent un espace à la fois simple et élégant, où chaque détail a été pensé : des tables fabriquées par le père du chef, Piergiorgio, artisan menuisier, aux tissus des coussins soigneusement choisis.\n\nÀ l’entrée, le magnifique comptoir en étain attire le regard et offre également la possibilité de s’installer pour un repas plus décontracté, tout en restant au cœur de l’ambiance du restaurant."
     },
     "wines": {
-      "title": "Les Vins",
+      "title": "🍴 Nos menus et offres",
       "subtitle": "Sélection",
-      "description": "Le vin occupe une place centrale au restaurant notamment grâce à Daniele, responsable passionné, qui accompagne chaque table avec attention et justesse et à Dilia La Cave, d'où de nombreux vins sont importés directement auprès de vignerons italiens."
+      "description": "Le vin occupe une place centrale au restaurant notamment grâce à Daniele, responsable passionné, qui accompagne chaque table avec attention et justesse et à Dilia La Cave, d'où de nombreux vins sont importés directement auprès de vignerons italiens.\n\n<div>\n<p>Le vin occupe une place centrale au restaurant notamment grâce à Daniele, responsable passionné, qui accompagne chaque table avec attention et justesse et à Dilia La Cave, d'où de nombreux vins sont importés directement auprès de vignerons italiens.</p>\n\n<h3>Horaires d’ouverture</h3>\n<p>Jeudi à dimanche : déjeuner et dîner</p>\n<p>Lundi : dîner uniquement</p>\n\n<h3>Déjeuners</h3>\n<p>Tous les déjeuners, vous pouvez choisir à la carte</p>\n<p>Formule Déjeuner (jeudi et vendredi) : Entrée + Plat + Dessert pour 28 €</p>\n<p>Une sélection simple, fraîche et savoureuse pour un déjeuner rapide ou détendu, parfait pour profiter du quartier et de l’atmosphère de Dilia.</p>\n<p>Samedi et dimanche : possibilité de choisir notre menu dégustation, pour une expérience complète même à midi.</p>\n\n<h3>Dîners</h3>\n<p>Tous les dîners (jeudi, vendredi, samedi, dimanche et lundi) sont proposés sous forme de menu dégustation, pour savourer pleinement la créativité de Michele Farnesi :</p>\n<ul>\n<li>6 passages : 65 €</li>\n<li>9 passages : 98 €</li>\n</ul>\n<p>Accord vins recommandé pour sublimer chaque plat :</p>\n<ul>\n<li>Accord 6 passages : 42 €</li>\n<li>Accord 9 passages : 63 €</li>\n</ul>\n</div>"
     },
     "reservation": {
       "title": "Réservation",
@@ -30,11 +30,11 @@
       "subtitle": "Nous trouver",
       "address": "1 Rue d'Eupatoria, 75020 Paris",
       "phone": "+33 9 53 56 24 14",
-      "email": "contact@dilia.fr",
+      "email": "info@dilia.fr",
       "hours": {
         "title": "Horaires",
         "lunch": "Déjeuner du jeudi au dimanche : 12h30 - 14h00",
-        "dinner": "Dîner du jeudi au lundi: 19h30 - 22h30",
+        "dinner": "Dîner du jeudi au lundi: 19h30 - 22:30",
         "closed": "Fermé les mardi et mercredi"
       }
     }

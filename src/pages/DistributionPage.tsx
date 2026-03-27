@@ -9,9 +9,9 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import muni from '@/assets/webp/cave/bouteille-cave-4.webp';
-import eben from '@/assets/webp/cave/bouteille-11.webp';
-import rugoli from '@/assets/webp/cave/bouteilles-cave-3.webp';
+import muni from '@/assets/webp/cave/bouteille-cave-4-400.webp';
+import eben from '@/assets/webp/cave/bouteille-11-400.webp';
+import rugoli from '@/assets/webp/cave/bouteilles-cave-3-400.webp';
 
 const DistributionPage = () => {
   const { t } = useLanguage();
