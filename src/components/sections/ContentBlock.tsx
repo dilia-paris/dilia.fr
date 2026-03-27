@@ -21,6 +21,7 @@ interface ContentBlockProps {
   imageSrc?: string;
   imageAlt?: string;
   socialLinks?: SocialLink[];
+  imagePriority?: boolean;
 }
 
 const ContentBlock = ({
@@ -35,6 +36,7 @@ const ContentBlock = ({
   imageSrc,
   imageAlt = 'Photo',
   socialLinks,
+  imagePriority = false,
 }: ContentBlockProps) => {
   const isLeft = align === 'left';
 
@@ -97,6 +99,7 @@ const ContentBlock = ({
                 size="content"
                 aspectRatio="4/3"
                 placeholderText="Photo"
+                priority={imagePriority}
               />
             </div>
           )}

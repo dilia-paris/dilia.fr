@@ -58,6 +58,7 @@ const LaCavePage = () => {
         description={t('lacave', 'sections.story.description')}
         imageSrc={histoire}
         imageAlt="La Cave"
+        imagePriority={true}
         socialLinks={[
           { platform: 'instagram', url: 'https://www.instagram.com/dilia_lacave/', label: 'Instagram' },
         ]}

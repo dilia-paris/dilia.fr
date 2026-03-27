@@ -1,4 +1,7 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
+import { lazy, Suspense } from 'react';
+
+const ContactMap = lazy(() => import('./ContactMap'));
 
 interface Hours {
   title: string;
@@ -110,19 +113,14 @@ const ContactSection = ({
             </div>
           )}
 
-          {/* Map */}
-          <div className="mt-12 aspect-[16/9] md:aspect-[21/9] border border-border overflow-hidden">
-            <iframe
-              title="Map"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          {/* Map - Lazy loaded */}
+          <Suspense fallback={
+            <div className="mt-12 aspect-[16/9] md:aspect-[21/9] border border-border bg-muted animate-pulse flex items-center justify-center">
+              <span className="text-sm opacity-60">Loading map...</span>
+            </div>
+          }>
+            <ContactMap address={address} />
+          </Suspense>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import imagemin from 'imagemin';
 import imageminWebp from 'imagemin-webp';
-import imageminMozjpeg from 'imagemin-mozjpeg';
+import sharp from 'sharp';
 import { glob } from 'glob';
 import path from 'path';
 import fs from 'fs/promises';
@@ -8,32 +8,27 @@ import fs from 'fs/promises';
 const ASSETS_DIR = 'src/assets';
 const WEBP_OUTPUT_DIR = 'src/assets/webp';
 
-// Images flagged by Lighthouse as needing optimization
-const CRITICAL_IMAGES = [
-  'src/assets/dilia/DILIA-2024-michele.jpg',   // 35.66 MB - HERO IMAGE
-  'src/assets/cave/vin.JPG',                    // 3.83 MB
-  'src/assets/cave/histoire.JPG',               // 3.18 MB
-  'src/assets/dilieta/pizza-fritta.JPG',        // 2.84 MB
-  'src/assets/cave/1.JPG',
-  'src/assets/cave/2.JPG',
-  'src/assets/cave/3.JPG',
-  'src/assets/cave/4.JPG',
-  'src/assets/cave/5.JPG',
-  'src/assets/cave/6.JPG',
-  'src/assets/cave/bouteille-11.JPG',
-  'src/assets/cave/bouteille-cave-4.JPG',
-  'src/assets/cave/bouteilles-cave-3.JPG',
-  'src/assets/cave/evenement.JPG',
-  'src/assets/dilia/1000-feuille-truffe.JPG',
-  'src/assets/dilia/DILIA-2024-bar.jpg',
-  'src/assets/dilia/DILIA-2024-michele-travail.jpg',
-  'src/assets/dilieta/carte.JPG',
-  'src/assets/dilieta/fournisseur.JPG',
-  'src/assets/dilieta/traiteur-1.JPG',
-  'src/assets/dilieta/vitrine-5.JPG',
-];
+// Target widths for responsive images
+const RESPONSIVE_WIDTHS = [400, 800, 1200];
 
-async function optimizeImage(inputPath, quality = 80) {
+// Images with their target max width (based on OptimizedImage component sizes)
+const IMAGE_CONFIG = {
+  // Hero images (1920px max in component)
+  'dilia/DILIA-2024-michele.jpg': { maxWidth: 1920, quality: 75 },
+  'dilia/DILIA-2024-bar.jpg': { maxWidth: 1920, quality: 75 },
+  'dilia/DILIA-2024-michele-travail.jpg': { maxWidth: 1920, quality: 75 },
+  
+  // Content images (800px max in component) - default
+  'cave/vin.JPG': { maxWidth: 800, quality: 80 },
+  'cave/histoire.JPG': { maxWidth: 800, quality: 80 },
+  'dilieta/pizza-fritta.JPG': { maxWidth: 800, quality: 80 },
+};
+
+// Default config for images not explicitly listed
+const DEFAULT_CONFIG = { maxWidth: 800, quality: 80 };
+
+async function optimizeImageWithResize(inputPath, config) {
+  const { maxWidth, quality } = config;
   const dir = path.dirname(inputPath).replace(ASSETS_DIR, WEBP_OUTPUT_DIR);
   const filename = path.basename(inputPath, path.extname(inputPath));
   
@@ -42,54 +37,62 @@ async function optimizeImage(inputPath, quality = 80) {
 
   console.log(`Optimizing: ${inputPath}`);
   
-  // Convert to WebP
-  const webpFiles = await imagemin([inputPath], {
-    destination: dir,
-    plugins: [
-      imageminWebp({
-        quality: quality,
-        method: 6, // Better compression (slower)
-      })
-    ]
-  });
-
-  for (const file of webpFiles) {
-    const originalSize = (await fs.stat(inputPath)).size;
-    const optimizedSize = file.data.length;
-    const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(1);
+  const image = sharp(inputPath);
+  const metadata = await image.metadata();
+  
+  // If image is already smaller than maxWidth, just convert to WebP
+  if (metadata.width <= maxWidth) {
+    const outputPath = path.join(dir, `${filename}.webp`);
+    await image
+      .webp({ quality, effort: 6 })
+      .toFile(outputPath);
     
-    console.log(`  → ${file.destinationPath}`);
-    console.log(`    Original: ${(originalSize / 1024 / 1024).toFixed(2)} MB`);
-    console.log(`    Optimized: ${(optimizedSize / 1024).toFixed(0)} KB`);
-    console.log(`    Savings: ${savings}%`);
+    const stats = await fs.stat(outputPath);
+    console.log(`  → ${outputPath}`);
+    console.log(`    Size: ${(stats.size / 1024).toFixed(0)} KB (width: ${metadata.width}px)`);
     console.log('');
+    return;
   }
 
-  return webpFiles;
+  // Resize to maxWidth and convert to WebP
+  const mainOutputPath = path.join(dir, `${filename}.webp`);
+  await sharp(inputPath)
+    .resize(maxWidth, null, { withoutEnlargement: true })
+    .webp({ quality, effort: 6 })
+    .toFile(mainOutputPath);
+  
+  const mainStats = await fs.stat(mainOutputPath);
+  console.log(`  → ${mainOutputPath}`);
+  console.log(`    Size: ${(mainStats.size / 1024).toFixed(0)} KB (width: ${maxWidth}px)`);
+
+  // Generate responsive variants
+  for (const width of RESPONSIVE_WIDTHS) {
+    if (width >= metadata.width || width >= maxWidth) continue;
+    
+    const variantPath = path.join(dir, `${filename}-${width}.webp`);
+    await sharp(inputPath)
+      .resize(width, null, { withoutEnlargement: true })
+      .webp({ quality: quality - 5, effort: 6 })
+      .toFile(variantPath);
+    
+    const variantStats = await fs.stat(variantPath);
+    console.log(`    + ${width}w: ${(variantStats.size / 1024).toFixed(0)} KB`);
+  }
+  
+  console.log('');
 }
 
 async function main() {
-  console.log('🖼️  Starting image optimization...\n');
+  console.log('🖼️  Starting image optimization with resizing...\n');
   
-  // First, optimize critical images
-  console.log('=== Optimizing Critical Images ===\n');
-  for (const img of CRITICAL_IMAGES) {
-    try {
-      await optimizeImage(img, 75); // Lower quality for large images
-    } catch (err) {
-      console.error(`Error optimizing ${img}:`, err.message);
-    }
-  }
-
-  // Then, optimize all other JPG images
-  console.log('=== Optimizing All Images ===\n');
-  const allImages = await glob(`${ASSETS_DIR}/**/*.+(jpg|JPG|jpeg)`, {
-    ignore: CRITICAL_IMAGES
-  });
+  // Optimize all JPG images
+  const allImages = await glob(`${ASSETS_DIR}/**/*.+(jpg|JPG|jpeg)`);
 
   for (const img of allImages) {
     try {
-      await optimizeImage(img, 85); // Higher quality for regular images
+      const relativePath = path.relative(ASSETS_DIR, img);
+      const config = IMAGE_CONFIG[relativePath] || DEFAULT_CONFIG;
+      await optimizeImageWithResize(img, config);
     } catch (err) {
       console.error(`Error optimizing ${img}:`, err.message);
     }

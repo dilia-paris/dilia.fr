@@ -1,4 +1,4 @@
-import { useState, ImgHTMLAttributes } from 'react';
+import { useState, useMemo, ImgHTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
 type ImageSize = 'hero' | 'content' | 'gallery' | 'og';
@@ -18,6 +18,26 @@ interface OptimizedImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 
   sizes?: string;
   aspectRatio?: string;
   placeholderText?: string;
+  priority?: boolean;
+}
+
+/**
+ * Generate srcset from base image path
+ * Expects images to be named like: image.webp, image-400.webp, image-800.webp, image-1200.webp
+ */
+function generateSrcSet(src: string): string | undefined {
+  // Only generate srcset for webp images in assets
+  if (!src.includes('/assets/webp/') || !src.endsWith('.webp')) {
+    return undefined;
+  }
+
+  const basePath = src.replace('.webp', '');
+  // Only include variants that actually exist (400px variants)
+  const widths = [400];
+  
+  const srcSetParts = widths.map(width => `${basePath}-${width}.webp ${width}w`);
+  
+  return srcSetParts.join(', ');
 }
 
 const OptimizedImage = ({
@@ -28,12 +48,19 @@ const OptimizedImage = ({
   sizes,
   aspectRatio,
   placeholderText = 'Photo',
+  priority = false,
   className,
   ...props
 }: OptimizedImageProps) => {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
   const config = SIZE_CONFIG[size];
+
+  // Auto-generate srcset if not provided
+  const finalSrcSet = useMemo(() => {
+    if (srcSet) return srcSet;
+    return generateSrcSet(src);
+  }, [src, srcSet]);
 
   if (error || !src) {
     return (
@@ -64,9 +91,10 @@ const OptimizedImage = ({
         alt={alt}
         width={config.width}
         height={config.height}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
         decoding="async"
-        srcSet={srcSet}
+        fetchPriority={priority ? "high" : "auto"}
+        srcSet={finalSrcSet}
         sizes={sizes ?? config.sizes}
         onLoad={() => setLoaded(true)}
         onError={() => setError(true)}

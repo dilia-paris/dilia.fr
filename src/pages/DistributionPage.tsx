@@ -117,7 +117,7 @@ const DistributionPage = () => {
       </div>
 
       {/* Contact Form */}
-      <section id="contact" className="py-16 md:py-24">
+      <section id="contact" className="py-16 md:py-24" style={{ minHeight: '800px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
@@ -129,14 +129,15 @@ const DistributionPage = () => {
               </h2>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-sm tracking-wide opacity-70 mb-2 block">
+                  <label htmlFor="contact-name" className="text-sm tracking-wide opacity-70 mb-2 block">
                     {t('distribution', 'sections.contact.form.name')}
                   </label>
                   <Input 
                     type="text"
+                    id="contact-name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
@@ -144,11 +145,12 @@ const DistributionPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-sm tracking-wide opacity-70 mb-2 block">
+                  <label htmlFor="contact-company" className="text-sm tracking-wide opacity-70 mb-2 block">
                     {t('distribution', 'sections.contact.form.company')}
                   </label>
                   <Input 
                     type="text"
+                    id="contact-company"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
@@ -159,11 +161,12 @@ const DistributionPage = () => {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-sm tracking-wide opacity-70 mb-2 block">
+                  <label htmlFor="contact-email" className="text-sm tracking-wide opacity-70 mb-2 block">
                     {t('distribution', 'sections.contact.form.email')}
                   </label>
                   <Input 
                     type="email"
+                    id="contact-email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
@@ -171,11 +174,12 @@ const DistributionPage = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-sm tracking-wide opacity-70 mb-2 block">
+                  <label htmlFor="contact-phone" className="text-sm tracking-wide opacity-70 mb-2 block">
                     {t('distribution', 'sections.contact.form.phone')}
                   </label>
                   <Input 
                     type="tel"
+                    id="contact-phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
@@ -185,11 +189,12 @@ const DistributionPage = () => {
               </div>
 
               <div>
-                <label className="text-sm tracking-wide opacity-70 mb-2 block">
+                <label htmlFor="contact-message" className="text-sm tracking-wide opacity-70 mb-2 block">
                   {t('distribution', 'sections.contact.form.message')}
                 </label>
                 <Textarea 
                   rows={5}
+                  id="contact-message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
