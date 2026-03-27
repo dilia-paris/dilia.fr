@@ -44,7 +44,7 @@ const Header = () => {
           {/* Logo */}
           <Link to={`/${language}`} className="hover:opacity-70 transition-opacity">
             <OptimizedImage
-              src="/d_logo.png"
+              src="/d.png"
               alt="Dilia logo"
               size="content"
               aspectRatio="1/1"
