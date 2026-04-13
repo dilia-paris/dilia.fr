@@ -1,0 +1,26 @@
+key,value
+hero.title,Distribution
+hero.subtitle,Vins italiens pour professionnels
+sections.story.title,Notre Mission
+sections.story.subtitle,L'excellence italienne
+sections.story.description,"Nous importons et distribuons des vins italiens d'exception auprès des restaurants, cavistes et épiceries fines. Notre sélection privilégie les vignerons indépendants et les pratiques durables."
+sections.team.title,Qui Sommes-Nous
+sections.team.subtitle,Notre équipe
+sections.team.description,"Une équipe passionnée, avec une connaissance approfondie du vignoble italien. Nous visitons régulièrement nos producteurs et pouvons vous conseiller sur mesure."
+sections.tasting.title,Dégustation
+sections.tasting.subtitle,Pour professionnels
+sections.tasting.description,"Nous organisons des dégustations professionnelles dans nos locaux ou chez vous, pour vous faire découvrir notre gamme et vous aider à constituer votre carte."
+sections.prices.title,Tarifs
+sections.prices.subtitle,Demande de prix
+sections.prices.description,"Pour recevoir notre catalogue et nos tarifs professionnels, contactez-nous. Nous étudions chaque demande avec attention et proposons des conditions adaptées."
+sections.contact.title,Contact
+sections.contact.subtitle,Nous contacter
+sections.contact.address,"30 Rue Etienne Dolet, 75020 Paris"
+sections.contact.phone,+33 1 73 71 03 05
+sections.contact.email,distribution@dilia.fr
+sections.contact.form.name,Nom
+sections.contact.form.company,Entreprise
+sections.contact.form.email,Email
+sections.contact.form.phone,Téléphone
+sections.contact.form.message,Message
+sections.contact.form.submit,Envoyer

@@ -1,0 +1,74 @@
+key,value
+hero.title,Dilia
+hero.subtitle,Une petite institution au cœur du 20ème arrondissement
+sections.chef.title,Historique
+sections.chef.subtitle,Michele Farnesi
+sections.chef.description," Dilia est né en 2015, de l’envie du chef et propriétaire Michele Farnesi de créer un lieu vraiment libre.
+
+Libre de proposer sa cuisine, bien sûr, mais aussi de montrer qu’on peut faire de la gastronomie de qualité sans grands budgets ni chichi.
+Libre de prouver qu’une cuisine gastronomique peut être accessible dans le prix, mais aussi dans l’atmosphère : sincère, conviviale et sans prétention.
+
+Chez Dilia, les plats sont savoureux, francs et surprenants, pensés pour éveiller vos papilles sans artifices inutiles.
+Pour nous, l’élégance n’est pas dans la démonstration, mais dans le respect du produit, l’attention au client et le plaisir du moment partagé. C’est ça notre savoir-faire.
+
+Dilia est né de cette envie : sortir des codes du restaurant gastronomique classique et offrir une alternative crédible, contemporaine et vivante.
+
+Chaque jour, nous partageons cette vision avec tous ceux qui franchissent notre porte et s’installent à notre table."
+sections.chef.quote,"La cuisine, c'est l'amour que l'on met dans chaque assiette."
+sections.menu.title,Lieu et ambiance
+sections.menu.subtitle,Cuisine de saison
+sections.menu.description,"Dilia se niche sur une petite place charmante de Ménilmontant, animée par les habitants mais étonnamment tranquille, à l’abri du trafic.
+En été, notre terrasse donne l’impression de dîner dans un petit village à la campagne : calme, convivial, et parfait pour profiter du soleil et de l’ambiance du quartier.
+
+À l’intérieur, le restaurant est petit et intimiste, avec une atmosphère chaleureuse qui rappelle une maison de campagne. Les briques et pierres apparentes, les poutres à nu et le décor épuré créent un espace à la fois simple et élégant, où chaque détail a été pensé : des tables fabriquées par le père du chef, Piergiorgio, artisan menuisier, aux tissus des coussins soigneusement choisis.
+
+À l’entrée, le magnifique comptoir en étain attire le regard et offre également la possibilité de s’installer pour un repas plus décontracté, tout en restant au cœur de l’ambiance du restaurant."
+sections.wines.title,🍴 Nos menus et offres
+sections.wines.subtitle,Sélection
+sections.wines.description,"Le vin occupe une place centrale au restaurant notamment grâce à Daniele, responsable passionné, qui accompagne chaque table avec attention et justesse et à Dilia La Cave, d'où de nombreux vins sont importés directement auprès de vignerons italiens.
+
+<div>
+<p>Le vin occupe une place centrale au restaurant notamment grâce à Daniele, responsable passionné, qui accompagne chaque table avec attention et justesse et à Dilia La Cave, d'où de nombreux vins sont importés directement auprès de vignerons italiens.</p>
+
+<h3>Horaires d’ouverture</h3>
+<p>Jeudi à dimanche : déjeuner et dîner</p>
+<p>Lundi : dîner uniquement</p>
+
+<h3>Déjeuners</h3>
+<p>Tous les déjeuners, vous pouvez choisir à la carte</p>
+<p>Formule Déjeuner (jeudi et vendredi) : Entrée + Plat + Dessert pour 28 €</p>
+<p>Une sélection simple, fraîche et savoureuse pour un déjeuner rapide ou détendu, parfait pour profiter du quartier et de l’atmosphère de Dilia.</p>
+<p>Samedi et dimanche : possibilité de choisir notre menu dégustation, pour une expérience complète même à midi.</p>
+
+<h3>Dîners</h3>
+<p>Tous les dîners (jeudi, vendredi, samedi, dimanche et lundi) sont proposés sous forme de menu dégustation, pour savourer pleinement la créativité de Michele Farnesi :</p>
+<ul>
+<li>6 passages : 65 €</li>
+<li>9 passages : 98 €</li>
+</ul>
+<p>Accord vins recommandé pour sublimer chaque plat :</p>
+<ul>
+<li>Accord 6 passages : 42 €</li>
+<li>Accord 9 passages : 63 €</li>
+</ul>
+</div>"
+sections.reservation.title,Réservation
+sections.reservation.subtitle,Réservez votre table
+sections.reservation.description,"Nous sommes ouverts du jeudi au dimanche midi et soir, lundi uniquement le soir
+
+de 12:30 à 14:00 et de 19:30 à 22:30
+
+Nous sommes disponibles les jours d'ouverture au +33(0)953562414
+
+Nous n'acceptons ni les chèques ni les cartes American Express.
+
+Merci et à très bientôt !"
+sections.contact.title,Contact
+sections.contact.subtitle,Nous trouver
+sections.contact.address,"1 Rue d'Eupatoria, 75020 Paris"
+sections.contact.phone,+33 9 53 56 24 14
+sections.contact.email,info@dilia.fr
+sections.contact.hours.title,Horaires
+sections.contact.hours.lunch,Déjeuner du jeudi au dimanche : 12h30 - 14h00
+sections.contact.hours.dinner,Dîner du jeudi au lundi: 19h30 - 22:30
+sections.contact.hours.closed,Fermé les mardi et mercredi

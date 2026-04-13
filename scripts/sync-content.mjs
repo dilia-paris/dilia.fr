@@ -54,6 +54,36 @@ function rowsToJson(rows) {
   return result;
 }
 
+// In .env files, newlines are stored as literal \n sequences (two chars: \ and n).
+// Outside JSON strings these are structural whitespace; inside strings they're valid JSON escapes.
+// This function replaces structural \n with spaces while leaving in-string \n untouched.
+function fixLiteralNewlines(raw) {
+  let result = '';
+  let inString = false;
+  let escaped = false;
+  for (let i = 0; i < raw.length; i++) {
+    const ch = raw[i];
+    if (escaped) {
+      result += ch;
+      escaped = false;
+    } else if (ch === '\\') {
+      if (inString) {
+        result += ch;
+        escaped = true;
+      } else {
+        i++; // skip the char after \ (e.g. 'n') — it's structural whitespace
+        result += ' ';
+      }
+    } else if (ch === '"') {
+      inString = !inString;
+      result += ch;
+    } else {
+      result += ch;
+    }
+  }
+  return result;
+}
+
 async function main() {
   const sheetId = process.env.SHEET_ID;
   if (!sheetId) throw new Error('Missing SHEET_ID environment variable');
@@ -61,7 +91,14 @@ async function main() {
   const serviceAccountKeyRaw = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
   if (!serviceAccountKeyRaw) throw new Error('Missing GOOGLE_SERVICE_ACCOUNT_KEY environment variable');
 
-  const credentials = JSON.parse(serviceAccountKeyRaw);
+  // GitHub Actions passes actual newlines in secrets; act/.env files use literal \n sequences.
+  // Parse accordingly.
+  let credentials;
+  try {
+    credentials = JSON.parse(serviceAccountKeyRaw);
+  } catch {
+    credentials = JSON.parse(fixLiteralNewlines(serviceAccountKeyRaw));
+  }
 
   const auth = new google.auth.GoogleAuth({
     credentials,

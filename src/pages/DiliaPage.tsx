@@ -80,7 +80,15 @@ const DiliaPage = () => {
           description={t('dilia', 'sections.menu.description')}
           imageSrc={menu}
           imageAlt="Menu"
-        />
+        >
+          <a
+            href="/menu-dilia.pdf"
+            download
+            className="inline-flex items-center gap-2 border border-foreground/30 px-5 py-2.5 text-sm tracking-wide hover:bg-foreground hover:text-background transition-colors"
+          >
+            {t('common', 'buttons.downloadMenu')}
+          </a>
+        </ContentBlock>
       </div>
 
       <ContentBlock
