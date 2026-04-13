@@ -7,8 +7,8 @@ import ContentBlock from '@/components/sections/ContentBlock';
 import ContactSection from '@/components/sections/ContactSection';
 import SectionNav from '@/components/sections/SectionNav';
 import { useLanguage } from '@/contexts/LanguageContext';
-import michele from '@/assets/webp/dilia/DILIA-2024-michele-travail-400.webp';
-import menu from '@/assets/webp/dilia/1000-feuille-truffe-400.webp';
+import michele from '@/assets/webp/dilia/rentre-porte-top-400.webp';
+import menu from '@/assets/webp/dilia/salle-2.webp';
 import vin from '@/assets/webp/dilia/DILIA-2024-bar-400.webp';
 
 const DiliaPage = () => {
