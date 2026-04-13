@@ -44,6 +44,7 @@ async function optimizeImageWithResize(inputPath, config) {
   if (metadata.width <= maxWidth) {
     const outputPath = path.join(dir, `${filename}.webp`);
     await image
+      .rotate() // auto-rotate based on EXIF orientation
       .webp({ quality, effort: 6 })
       .toFile(outputPath);
     
@@ -57,6 +58,7 @@ async function optimizeImageWithResize(inputPath, config) {
   // Resize to maxWidth and convert to WebP
   const mainOutputPath = path.join(dir, `${filename}.webp`);
   await sharp(inputPath)
+    .rotate() // auto-rotate based on EXIF orientation
     .resize(maxWidth, null, { withoutEnlargement: true })
     .webp({ quality, effort: 6 })
     .toFile(mainOutputPath);
@@ -71,6 +73,7 @@ async function optimizeImageWithResize(inputPath, config) {
     
     const variantPath = path.join(dir, `${filename}-${width}.webp`);
     await sharp(inputPath)
+      .rotate() // auto-rotate based on EXIF orientation
       .resize(width, null, { withoutEnlargement: true })
       .webp({ quality: quality - 5, effort: 6 })
       .toFile(variantPath);

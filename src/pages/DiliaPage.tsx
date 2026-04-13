@@ -93,6 +93,28 @@ const DiliaPage = () => {
         imageAlt="Wines"
       />
 
+
+      <ContentBlock
+        id="wines"
+        align="right"
+        title={t('dilia', 'sections.wines.title')}
+        subtitle={t('dilia', 'sections.wines.subtitle')}
+        description={t('dilia', 'sections.wines.description')}
+        imageSrc={vin}
+        imageAlt="Wines"
+      />
+
+
+      <ContentBlock
+        id="wines"
+        align="left"
+        title={t('dilia', 'sections.wines.title')}
+        subtitle={t('dilia', 'sections.wines.subtitle')}
+        description={t('dilia', 'sections.wines.description')}
+        imageSrc={vin}
+        imageAlt="Wines"
+      />
+
       {/* Reservation Section with iframe placeholder */}
       <section id="reservation" className="py-16 md:py-24 bg-muted">
         <div className="container mx-auto px-4">

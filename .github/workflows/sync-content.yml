@@ -1,0 +1,43 @@
+name: Sync content from Google Sheets
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Every day at 6am UTC (8am Paris time)
+  workflow_dispatch:       # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Sync content from Google Sheets
+        env:
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+        run: node scripts/sync-content.mjs
+
+      - name: Commit and push if content changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/
+          if git diff --staged --quiet; then
+            echo "No content changes — skipping commit"
+          else
+            git commit -m "chore: sync content from Google Sheets"
+            git push
+          fi
